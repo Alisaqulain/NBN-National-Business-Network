@@ -1,0 +1,161 @@
+import type { Event } from "@/types";
+
+export const EVENT_TYPES = [
+  "All Types",
+  "meeting",
+  "networking",
+  "expo",
+  "workshop",
+  "webinar",
+] as const;
+
+export const EVENT_TYPE_LABELS: Record<Event["type"], string> = {
+  meeting: "Chapter Meeting",
+  networking: "Networking Event",
+  expo: "Business Expo",
+  workshop: "Workshop",
+  webinar: "Webinar",
+};
+
+export const EVENT_TYPE_COLORS: Record<Event["type"], string> = {
+  meeting: "bg-nbn-navy/10 text-nbn-navy",
+  networking: "bg-blue-500/10 text-blue-600",
+  workshop: "bg-purple-500/10 text-purple-600",
+  expo: "bg-orange-500/10 text-orange-600",
+  webinar: "bg-green-500/10 text-green-600",
+};
+
+export const EVENTS: Event[] = [
+  {
+    _id: "ev-001",
+    title: "Referral Mastery Webinar",
+    description: "Learn proven referral strategies from India's top NBN performers. Interactive Q&A with chapter presidents from Mumbai and Delhi.",
+    type: "webinar",
+    date: "2026-08-10T10:00:00+05:30",
+    location: "Zoom Live",
+    city: "Online",
+    currentAttendees: 450,
+    maxAttendees: 500,
+    isVirtual: true,
+  },
+  {
+    _id: "ev-002",
+    title: "Mumbai Business Leaders Summit 2026",
+    description: "Connect with 250+ entrepreneurs at Mumbai's premier networking summit. Keynote by Rajesh Mehta, MD of Mehta Constructions.",
+    type: "networking",
+    date: "2026-08-15T09:00:00+05:30",
+    endDate: "2026-08-15T18:00:00+05:30",
+    location: "Taj Lands End, Bandra",
+    city: "Mumbai",
+    currentAttendees: 250,
+    maxAttendees: 300,
+    isVirtual: false,
+  },
+  {
+    _id: "ev-003",
+    title: "Leadership Excellence Workshop",
+    description: "Two-day intensive workshop on chapter leadership, referral tracking, and team building. Includes certification.",
+    type: "workshop",
+    date: "2026-08-22T09:30:00+05:30",
+    endDate: "2026-08-23T17:00:00+05:30",
+    location: "India Habitat Centre + Virtual",
+    city: "Delhi",
+    currentAttendees: 120,
+    maxAttendees: 150,
+    isVirtual: true,
+  },
+  {
+    _id: "ev-004",
+    title: "Bangalore Tech Founders Meetup",
+    description: "Exclusive networking for IT founders and SaaS entrepreneurs. Pitch sessions and referral matchmaking.",
+    type: "networking",
+    date: "2026-08-28T18:00:00+05:30",
+    location: "WeWork Embassy Tech Village",
+    city: "Bangalore",
+    currentAttendees: 85,
+    maxAttendees: 100,
+    isVirtual: false,
+  },
+  {
+    _id: "ev-005",
+    title: "NBN National Business Expo",
+    description: "India's largest referral-based business expo. 800+ exhibitors, 50+ industry categories, live referral exchange.",
+    type: "expo",
+    date: "2026-09-05T10:00:00+05:30",
+    endDate: "2026-09-07T20:00:00+05:30",
+    location: "Pragati Maidan, Hall 7",
+    city: "Delhi",
+    currentAttendees: 800,
+    maxAttendees: 1000,
+    isVirtual: false,
+  },
+  {
+    _id: "ev-006",
+    title: "Hyderabad Healthcare Networking Breakfast",
+    description: "Morning networking for doctors, hospital administrators, and healthcare entrepreneurs.",
+    type: "networking",
+    date: "2026-09-12T07:30:00+05:30",
+    location: "Novotel HITEC City",
+    city: "Hyderabad",
+    currentAttendees: 60,
+    maxAttendees: 80,
+    isVirtual: false,
+  },
+  {
+    _id: "ev-007",
+    title: "GST & Compliance Masterclass",
+    description: "Stay updated on GST changes, TDS compliance, and financial best practices for SMEs with CA experts.",
+    type: "webinar",
+    date: "2026-09-18T11:00:00+05:30",
+    location: "Zoom Live",
+    city: "Online",
+    currentAttendees: 320,
+    maxAttendees: 400,
+    isVirtual: true,
+  },
+  {
+    _id: "ev-008",
+    title: "Pune Manufacturing Connect",
+    description: "B2B networking for Pune's manufacturing hub. Supplier matchmaking and export opportunities.",
+    type: "networking",
+    date: "2026-09-25T10:00:00+05:30",
+    location: "Auto Cluster, Chinchwad",
+    city: "Pune",
+    currentAttendees: 95,
+    maxAttendees: 120,
+    isVirtual: false,
+  },
+  {
+    _id: "ev-009",
+    title: "Regional Chapter Presidents Meeting",
+    description: "Quarterly meeting for chapter presidents across Western India. Strategy planning and best practice sharing.",
+    type: "meeting",
+    date: "2026-10-03T09:00:00+05:30",
+    location: "NBN HQ, BKC Mumbai",
+    city: "Mumbai",
+    currentAttendees: 45,
+    maxAttendees: 50,
+    isVirtual: false,
+  },
+  {
+    _id: "ev-010",
+    title: "Digital Marketing for SMEs Workshop",
+    description: "Hands-on workshop covering SEO, Google Ads, and social media for Indian SMEs. Bring your laptop.",
+    type: "workshop",
+    date: "2026-10-10T10:00:00+05:30",
+    endDate: "2026-10-10T17:00:00+05:30",
+    location: "Chennai Trade Centre",
+    city: "Chennai",
+    currentAttendees: 70,
+    maxAttendees: 90,
+    isVirtual: false,
+  },
+];
+
+export function getNextEvent(): Event {
+  const now = new Date();
+  const upcoming = EVENTS.filter((e) => new Date(e.date) > now).sort(
+    (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime()
+  );
+  return upcoming[0] ?? EVENTS[0];
+}
