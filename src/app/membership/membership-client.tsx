@@ -35,14 +35,14 @@ export default function MembershipPage() {
   return (
     <>
       <section className="pt-32 pb-16 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-nbn-light to-white dark:from-nbn-dark dark:to-nbn-navy/20" />
-        <div className="container-nbn relative">
+        <div className="absolute inset-0 bg-gradient-to-br from-EBN-light to-white dark:from-EBN-dark dark:to-EBN-navy/20" />
+        <div className="container-EBN relative">
           <SectionHeading badge="Membership" title="Invest in Your Network" subtitle="Choose the plan that fits your business ambitions." />
         </div>
       </section>
 
       <section className="pb-20">
-        <div className="container-nbn">
+        <div className="container-EBN">
           <FadeIn className="flex justify-center mb-12">
             <div className="inline-flex items-center gap-3 p-1.5 rounded-full glass dark:glass-dark">
               <button onClick={() => setYearly(false)} className={cn("px-6 py-2 rounded-full text-sm font-semibold transition-all", !yearly ? "gradient-bg text-white shadow-lg" : "text-muted")}>Monthly</button>
@@ -53,18 +53,18 @@ export default function MembershipPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
             {MEMBERSHIP_PLANS.map((plan, i) => (
               <FadeIn key={plan.id} delay={i * 0.1}>
-                <GlassCard className={cn("h-full flex flex-col relative", "popular" in plan && plan.popular && "ring-2 ring-nbn-teal")}>
+                <GlassCard className={cn("h-full flex flex-col relative", "popular" in plan && plan.popular && "ring-2 ring-EBN-teal")}>
                   {"popular" in plan && plan.popular && (
                     <span className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full text-xs font-semibold gradient-bg text-white">Most Popular</span>
                   )}
-                  <h3 className="text-xl font-heading font-bold text-nbn-navy dark:text-white mb-2">{plan.name}</h3>
+                  <h3 className="text-xl font-heading font-bold text-EBN-navy dark:text-white mb-2">{plan.name}</h3>
                   <div className="mb-6">
                     <span className="text-4xl font-heading font-bold gradient-text">{formatCurrency(yearly ? plan.yearly : plan.monthly)}</span>
                     <span className="text-muted text-sm">/{yearly ? "year" : "month"}</span>
                   </div>
                   <ul className="space-y-3 mb-8 flex-1">
                     {plan.features.map((f) => (
-                      <li key={f} className="flex items-start gap-2 text-sm text-muted"><Check className="w-4 h-4 text-nbn-teal shrink-0 mt-0.5" />{f}</li>
+                      <li key={f} className="flex items-start gap-2 text-sm text-muted"><Check className="w-4 h-4 text-EBN-teal shrink-0 mt-0.5" />{f}</li>
                     ))}
                   </ul>
                   <Link href={`/signup?plan=${plan.id}`}><Button className="w-full">Join Now</Button></Link>
@@ -74,24 +74,24 @@ export default function MembershipPage() {
           </div>
 
           <FadeIn>
-            <h3 className="text-2xl font-heading font-bold text-center text-nbn-navy dark:text-white mb-8">Plan Comparison</h3>
+            <h3 className="text-2xl font-heading font-bold text-center text-EBN-navy dark:text-white mb-8">Plan Comparison</h3>
             <div className="overflow-x-auto rounded-2xl glass dark:glass-dark">
               <table className="w-full text-sm">
                 <thead>
-                  <tr className="border-b border-nbn-navy/10">
+                  <tr className="border-b border-EBN-navy/10">
                     <th className="text-left p-4 font-semibold">Feature</th>
                     {MEMBERSHIP_PLANS.map((p) => (<th key={p.id} className="p-4 font-semibold">{p.name}</th>))}
                   </tr>
                 </thead>
                 <tbody>
                   {COMPARISON_FEATURES.map((row) => (
-                    <tr key={row.name} className="border-b border-nbn-navy/5">
+                    <tr key={row.name} className="border-b border-EBN-navy/5">
                       <td className="p-4 text-muted">{row.name}</td>
                       {(["individual", "professional", "corporate", "enterprise"] as const).map((plan) => {
                         const val = row[plan];
                         return (
                           <td key={plan} className="p-4 text-center">
-                            {typeof val === "boolean" ? (val ? <Check className="w-5 h-5 text-nbn-teal mx-auto" /> : <X className="w-5 h-5 text-gray-300 mx-auto" />) : val}
+                            {typeof val === "boolean" ? (val ? <Check className="w-5 h-5 text-EBN-teal mx-auto" /> : <X className="w-5 h-5 text-gray-300 mx-auto" />) : val}
                           </td>
                         );
                       })}
@@ -104,8 +104,8 @@ export default function MembershipPage() {
         </div>
       </section>
 
-      <section id="benefits" className="section-padding bg-nbn-light dark:bg-nbn-dark/50">
-        <div className="container-nbn">
+      <section id="benefits" className="section-padding bg-EBN-light dark:bg-EBN-dark/50">
+        <div className="container-EBN">
           <SectionHeading badge="Benefits" title="What You Get" subtitle="Every membership includes access to our complete networking ecosystem." />
           <div className="grid md:grid-cols-3 gap-6">
             {[
@@ -116,7 +116,7 @@ export default function MembershipPage() {
               <FadeIn key={b.title} delay={i * 0.1}>
                 <GlassCard>
                   <p className="text-3xl font-heading font-bold gradient-text mb-2"><AnimatedCounter value={b.stat} suffix="+" /></p>
-                  <h4 className="font-heading font-bold text-nbn-navy dark:text-white mb-2">{b.title}</h4>
+                  <h4 className="font-heading font-bold text-EBN-navy dark:text-white mb-2">{b.title}</h4>
                   <p className="text-muted text-sm">{b.desc}</p>
                 </GlassCard>
               </FadeIn>
@@ -126,7 +126,7 @@ export default function MembershipPage() {
       </section>
 
       <section className="section-padding">
-        <div className="container-nbn max-w-3xl">
+        <div className="container-EBN max-w-3xl">
           <SectionHeading title="Frequently Asked Questions" />
           <Accordion type="single" collapsible>
             {FAQ.map((item, i) => (
@@ -142,7 +142,7 @@ export default function MembershipPage() {
       <section className="section-padding gradient-bg text-center">
         <FadeIn>
           <h2 className="text-3xl font-heading font-bold text-white mb-4">Ready to Join?</h2>
-          <Link href="/signup"><Button size="lg" variant="secondary" className="bg-white text-nbn-navy">Get Started <ArrowRight className="w-4 h-4" /></Button></Link>
+          <Link href="/signup"><Button size="lg" variant="secondary" className="bg-white text-EBN-navy">Get Started <ArrowRight className="w-4 h-4" /></Button></Link>
         </FadeIn>
       </section>
     </>

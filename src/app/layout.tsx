@@ -19,29 +19,29 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "NBN – National Business Network | Grow Through Trusted Relationships",
-    template: "%s | NBN – National Business Network",
+    default: "EBN – Entrepreneur Business Network | Grow Through Trusted Relationships",
+    template: "%s | EBN – Entrepreneur Business Network",
   },
   description:
-    "Join India's premier business networking platform. Generate quality referrals, attend weekly meetings, and grow your business through trusted professional relationships.",
-  keywords: ["business networking", "referrals", "BNI alternative", "India business network", "entrepreneurs"],
-  authors: [{ name: "National Business Network" }],
+    "Join India's premier entrepreneur networking platform. Generate quality referrals, attend weekly meetings, and grow your business through trusted professional relationships.",
+  keywords: ["business networking", "referrals", "entrepreneur network", "India business network", "entrepreneurs"],
+  authors: [{ name: "Entrepreneur Business Network" }],
   openGraph: {
     type: "website",
     locale: "en_IN",
-    url: "https://nbn.in",
-    siteName: "National Business Network",
-    title: "NBN – National Business Network",
+    url: "https://ebn.in",
+    siteName: "Entrepreneur Business Network",
+    title: "EBN – Entrepreneur Business Network",
     description: "Grow your business through trusted relationships.",
-    images: [{ url: "/og-image.png", width: 1200, height: 630 }],
+    images: [{ url: "/EBN Logo.png", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "NBN – National Business Network",
+    title: "EBN – Entrepreneur Business Network",
     description: "Grow your business through trusted relationships.",
   },
   robots: { index: true, follow: true },
-  metadataBase: new URL("https://nbn.in"),
+  metadataBase: new URL("https://ebn.in"),
 };
 
 export default function RootLayout({

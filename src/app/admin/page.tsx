@@ -54,7 +54,7 @@ export default function AdminPage() {
       <FadeIn>
         <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <div>
-            <h1 className="font-heading text-2xl font-bold text-nbn-navy lg:text-3xl">Admin Dashboard</h1>
+            <h1 className="font-heading text-2xl font-bold text-EBN-navy lg:text-3xl">Admin Dashboard</h1>
             <p className="mt-1 text-muted-foreground">Platform overview and analytics</p>
           </div>
           <Badge variant="secondary" className="w-fit">
@@ -74,7 +74,7 @@ export default function AdminPage() {
                   <div className="flex items-start justify-between">
                     <div>
                       <p className="text-sm text-muted-foreground">{stat.label}</p>
-                      <p className="mt-1 font-heading text-2xl font-bold text-nbn-navy">
+                      <p className="mt-1 font-heading text-2xl font-bold text-EBN-navy">
                         {stat.isCurrency ? (
                           formatCurrency(stat.value)
                         ) : (
@@ -86,7 +86,7 @@ export default function AdminPage() {
                         {stat.change}
                       </span>
                     </div>
-                    <div className="rounded-xl bg-gradient-to-br from-nbn-navy to-nbn-teal p-2.5 text-white shadow-lg">
+                    <div className="rounded-xl bg-gradient-to-br from-EBN-navy to-EBN-teal p-2.5 text-white shadow-lg">
                       <Icon className="h-5 w-5" />
                     </div>
                   </div>
@@ -138,7 +138,7 @@ export default function AdminPage() {
             <CardContent className="space-y-3">
               {RECENT_ACTIVITY.map((item, i) => (
                 <div key={i} className="rounded-xl border border-white/30 bg-white/40 p-3 backdrop-blur-sm">
-                  <p className="text-sm font-medium text-nbn-navy">{item.action}</p>
+                  <p className="text-sm font-medium text-EBN-navy">{item.action}</p>
                   <div className="mt-1 flex items-center justify-between text-xs text-muted-foreground">
                     <span>{item.user}</span>
                     <span>{item.time}</span>
@@ -156,7 +156,7 @@ export default function AdminPage() {
             <CardContent className="flex items-center justify-between p-6">
               <div>
                 <p className="text-sm text-muted-foreground">Manage Users</p>
-                <p className="font-heading text-lg font-bold text-nbn-navy">20,100 members</p>
+                <p className="font-heading text-lg font-bold text-EBN-navy">20,100 members</p>
               </div>
               <Button asChild variant="secondary" size="sm">
                 <Link href="/admin/users">View</Link>
@@ -167,7 +167,7 @@ export default function AdminPage() {
             <CardContent className="flex items-center justify-between p-6">
               <div>
                 <p className="text-sm text-muted-foreground">Manage Events</p>
-                <p className="font-heading text-lg font-bold text-nbn-navy">48 active</p>
+                <p className="font-heading text-lg font-bold text-EBN-navy">48 active</p>
               </div>
               <Button asChild variant="secondary" size="sm">
                 <Link href="/admin/events">View</Link>
@@ -178,7 +178,7 @@ export default function AdminPage() {
             <CardContent className="flex items-center justify-between p-6">
               <div>
                 <p className="text-sm text-muted-foreground">Manage Blogs</p>
-                <p className="font-heading text-lg font-bold text-nbn-navy">156 published</p>
+                <p className="font-heading text-lg font-bold text-EBN-navy">156 published</p>
               </div>
               <Button asChild variant="secondary" size="sm">
                 <Link href="/admin/blogs">View</Link>

@@ -64,7 +64,7 @@ export default function AdminEventsPage() {
       <FadeIn>
         <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <div>
-            <h1 className="font-heading text-2xl font-bold text-nbn-navy lg:text-3xl">Events</h1>
+            <h1 className="font-heading text-2xl font-bold text-EBN-navy lg:text-3xl">Events</h1>
             <p className="mt-1 text-muted-foreground">Create and manage platform events</p>
           </div>
           <Button>

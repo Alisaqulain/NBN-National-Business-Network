@@ -3,13 +3,13 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Cookie Policy",
-  description: "NBN Cookie Policy - How we use cookies on our website.",
+  description: "EBN Cookie Policy - How we use cookies on our website.",
 };
 
 export default function CookiesPage() {
   return (
     <div className="pt-28 pb-20">
-      <div className="container-nbn max-w-4xl">
+      <div className="container-EBN max-w-4xl">
         <SectionHeading title="Cookie Policy" subtitle="Last updated: July 27, 2026" />
         <FadeIn>
           <div className="space-y-6 text-muted">

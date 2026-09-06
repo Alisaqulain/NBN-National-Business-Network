@@ -22,6 +22,8 @@ import { cn } from "@/lib/utils";
 import { useAuthStore } from "@/store/auth-store";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
+import { BRAND } from "@/lib/constants";
 
 const DASHBOARD_LINKS = [
   { label: "Overview", href: "/dashboard", icon: LayoutDashboard },
@@ -60,18 +62,22 @@ export function DashboardSidebar({ variant }: SidebarProps) {
 
   const initials = user
     ? `${user.firstName?.[0] ?? ""}${user.lastName?.[0] ?? ""}`.toUpperCase()
-    : "NB";
+    : "EB";
 
   const sidebarContent = (
     <div className="flex h-full flex-col">
       <div className={cn("flex items-center gap-3 border-b border-white/10 p-5", collapsed && "justify-center")}>
-        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-nbn-navy to-nbn-teal text-xs font-bold text-white">
-          NBN
-        </div>
+        <Image
+          src={BRAND.logo}
+          alt={BRAND.shortName}
+          width={120}
+          height={36}
+          className={cn("h-8 w-auto brightness-0 invert", collapsed && "h-8 w-8 object-contain")}
+        />
         {!collapsed && (
           <div>
             <p className="font-heading text-sm font-bold text-white">{title}</p>
-            <p className="text-xs text-white/50">National Business Network</p>
+            <p className="text-xs text-white/50">{BRAND.name}</p>
           </div>
         )}
       </div>
@@ -91,7 +97,7 @@ export function DashboardSidebar({ variant }: SidebarProps) {
               className={cn(
                 "flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium transition-all",
                 active
-                  ? "bg-gradient-to-r from-nbn-navy/80 to-nbn-teal/80 text-white shadow-lg shadow-nbn-teal/20"
+                  ? "bg-gradient-to-r from-EBN-navy/80 to-EBN-teal/80 text-white shadow-lg shadow-EBN-teal/20"
                   : "text-white/70 hover:bg-white/10 hover:text-white",
                 collapsed && "justify-center px-2"
               )}
@@ -114,7 +120,7 @@ export function DashboardSidebar({ variant }: SidebarProps) {
               <p className="truncate text-sm font-medium text-white">
                 {user ? `${user.firstName} ${user.lastName}` : "Guest User"}
               </p>
-              <p className="truncate text-xs text-white/50">{user?.email ?? "member@nbn.in"}</p>
+              <p className="truncate text-xs text-white/50">{user?.email ?? "member@ebn.in"}</p>
             </div>
           )}
         </div>
@@ -139,7 +145,7 @@ export function DashboardSidebar({ variant }: SidebarProps) {
       <button
         type="button"
         onClick={() => setMobileOpen(true)}
-        className="fixed left-4 top-4 z-50 rounded-xl bg-nbn-navy/90 p-2 text-white backdrop-blur-md lg:hidden"
+        className="fixed left-4 top-4 z-50 rounded-xl bg-EBN-navy/90 p-2 text-white backdrop-blur-md lg:hidden"
       >
         <Menu className="h-5 w-5" />
       </button>
@@ -150,7 +156,7 @@ export function DashboardSidebar({ variant }: SidebarProps) {
 
       <aside
         className={cn(
-          "fixed inset-y-0 left-0 z-50 w-64 border-r border-white/10 bg-nbn-dark/95 backdrop-blur-xl transition-transform lg:translate-x-0",
+          "fixed inset-y-0 left-0 z-50 w-64 border-r border-white/10 bg-EBN-dark/95 backdrop-blur-xl transition-transform lg:translate-x-0",
           mobileOpen ? "translate-x-0" : "-translate-x-full lg:translate-x-0",
           collapsed && "lg:w-20"
         )}
@@ -168,7 +174,7 @@ export function DashboardSidebar({ variant }: SidebarProps) {
       <button
         type="button"
         onClick={() => setCollapsed(!collapsed)}
-        className="fixed bottom-6 z-50 hidden h-8 w-8 items-center justify-center rounded-full border border-white/20 bg-nbn-dark/90 text-white/70 backdrop-blur-md transition-all hover:text-white lg:flex"
+        className="fixed bottom-6 z-50 hidden h-8 w-8 items-center justify-center rounded-full border border-white/20 bg-EBN-dark/90 text-white/70 backdrop-blur-md transition-all hover:text-white lg:flex"
         style={{ left: collapsed ? "4.5rem" : "15rem" }}
       >
         {collapsed ? <ChevronRight className="h-4 w-4" /> : <ChevronLeft className="h-4 w-4" />}
@@ -187,10 +193,10 @@ export function DashboardShell({
   const [collapsed] = useState(false);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-nbn-light via-white to-nbn-teal/5">
+    <div className="min-h-screen bg-gradient-to-br from-EBN-light via-white to-EBN-teal/5">
       <div className="pointer-events-none fixed inset-0 overflow-hidden">
-        <div className="absolute -right-40 top-20 h-80 w-80 rounded-full bg-nbn-teal/10 blur-3xl" />
-        <div className="absolute -left-40 bottom-20 h-80 w-80 rounded-full bg-nbn-navy/10 blur-3xl" />
+        <div className="absolute -right-40 top-20 h-80 w-80 rounded-full bg-EBN-teal/10 blur-3xl" />
+        <div className="absolute -left-40 bottom-20 h-80 w-80 rounded-full bg-EBN-navy/10 blur-3xl" />
       </div>
       <DashboardSidebar variant={variant} />
       <main className={cn("relative min-h-screen transition-all lg:pl-64", collapsed && "lg:pl-20")}>

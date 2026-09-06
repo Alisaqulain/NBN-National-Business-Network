@@ -44,13 +44,13 @@ export default function ForgotPasswordPage() {
     <FadeIn className="w-full max-w-md">
       <GlassCard hover={false} className="p-8">
         <div className="mb-6 flex justify-center">
-          <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-nbn-navy/10 to-nbn-teal/10">
-            <Mail className="h-7 w-7 text-nbn-teal" />
+          <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-EBN-navy/10 to-EBN-teal/10">
+            <Mail className="h-7 w-7 text-EBN-teal" />
           </div>
         </div>
 
         <div className="mb-8 text-center">
-          <h1 className="font-heading text-2xl font-bold text-nbn-navy">Forgot Password?</h1>
+          <h1 className="font-heading text-2xl font-bold text-EBN-navy">Forgot Password?</h1>
           <p className="mt-2 text-sm text-muted-foreground">
             Enter your email and we&apos;ll send you a verification code to reset your password
           </p>
@@ -85,7 +85,7 @@ export default function ForgotPasswordPage() {
         <div className="mt-6 text-center">
           <Link
             href="/login"
-            className="inline-flex items-center gap-2 text-sm font-medium text-nbn-teal hover:underline"
+            className="inline-flex items-center gap-2 text-sm font-medium text-EBN-teal hover:underline"
           >
             <ArrowLeft className="h-4 w-4" />
             Back to sign in

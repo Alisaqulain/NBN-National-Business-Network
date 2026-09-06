@@ -14,7 +14,7 @@ export function MembershipPreview() {
 
   return (
     <section className="section-padding relative">
-      <div className="container-nbn">
+      <div className="container-EBN">
         <SectionHeading
           badge="Membership"
           title="Choose Your Plan"
@@ -50,7 +50,7 @@ export function MembershipPreview() {
               <GlassCard
                 className={cn(
                   "h-full flex flex-col relative",
-                  "popular" in plan && plan.popular && "ring-2 ring-nbn-teal"
+                  "popular" in plan && plan.popular && "ring-2 ring-EBN-teal"
                 )}
               >
                 {"popular" in plan && plan.popular && (
@@ -58,7 +58,7 @@ export function MembershipPreview() {
                     Most Popular
                   </span>
                 )}
-                <h3 className="text-xl font-heading font-bold text-nbn-navy dark:text-white mb-2">
+                <h3 className="text-xl font-heading font-bold text-EBN-navy dark:text-white mb-2">
                   {plan.name}
                 </h3>
                 <div className="mb-6">
@@ -70,7 +70,7 @@ export function MembershipPreview() {
                 <ul className="space-y-3 mb-8 flex-1">
                   {plan.features.map((feature) => (
                     <li key={feature} className="flex items-start gap-2 text-sm text-muted">
-                      <Check className="w-4 h-4 text-nbn-teal shrink-0 mt-0.5" />
+                      <Check className="w-4 h-4 text-EBN-teal shrink-0 mt-0.5" />
                       {feature}
                     </li>
                   ))}
@@ -87,7 +87,7 @@ export function MembershipPreview() {
         </div>
 
         <FadeIn className="text-center mt-10">
-          <Link href="/membership" className="text-nbn-teal font-semibold hover:underline inline-flex items-center gap-2">
+          <Link href="/membership" className="text-EBN-teal font-semibold hover:underline inline-flex items-center gap-2">
             Compare all plans in detail <ArrowRight className="w-4 h-4" />
           </Link>
         </FadeIn>

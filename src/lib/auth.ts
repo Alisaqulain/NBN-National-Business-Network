@@ -52,7 +52,7 @@ export async function getAuthUser(req?: NextRequest): Promise<IUser | null> {
   if (!token) {
     try {
       const cookieStore = await cookies();
-      token = cookieStore.get("nbn_token")?.value;
+      token = cookieStore.get("ebn_token")?.value;
     } catch {
       /* cookies() unavailable outside request */
     }

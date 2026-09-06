@@ -34,7 +34,7 @@ export const useAuthStore = create<AuthState>()(
         set({ user: null, token: null, isAuthenticated: false, isLoading: false }),
     }),
     {
-      name: "nbn-auth",
+      name: "EBN-auth",
       partialize: (state) => ({
         user: state.user,
         token: state.token,

@@ -91,7 +91,7 @@ export default function SignupPage() {
     <FadeIn className="w-full max-w-lg">
       <GlassCard hover={false} className="p-8">
         <div className="mb-8 text-center">
-          <h1 className="font-heading text-2xl font-bold text-nbn-navy">Join NBN</h1>
+          <h1 className="font-heading text-2xl font-bold text-EBN-navy">Join EBN</h1>
           <p className="mt-2 text-sm text-muted-foreground">
             Create your member account in 2 simple steps
           </p>
@@ -108,19 +108,19 @@ export default function SignupPage() {
                 <div
                   className={`flex h-10 w-10 items-center justify-center rounded-full transition-all ${
                     isComplete
-                      ? "bg-gradient-to-r from-nbn-navy to-nbn-teal text-white"
+                      ? "bg-gradient-to-r from-EBN-navy to-EBN-teal text-white"
                       : isActive
-                        ? "border-2 border-nbn-teal bg-nbn-teal/10 text-nbn-teal"
-                        : "border border-nbn-navy/20 bg-white/50 text-muted-foreground"
+                        ? "border-2 border-EBN-teal bg-EBN-teal/10 text-EBN-teal"
+                        : "border border-EBN-navy/20 bg-white/50 text-muted-foreground"
                   }`}
                 >
                   {isComplete ? <Check className="h-5 w-5" /> : <Icon className="h-5 w-5" />}
                 </div>
-                <span className={`hidden text-sm font-medium sm:block ${isActive ? "text-nbn-navy" : "text-muted-foreground"}`}>
+                <span className={`hidden text-sm font-medium sm:block ${isActive ? "text-EBN-navy" : "text-muted-foreground"}`}>
                   {s.title}
                 </span>
                 {i < STEPS.length - 1 && (
-                  <div className={`h-0.5 w-8 ${step > s.id ? "bg-nbn-teal" : "bg-nbn-navy/10"}`} />
+                  <div className={`h-0.5 w-8 ${step > s.id ? "bg-EBN-teal" : "bg-EBN-navy/10"}`} />
                 )}
               </div>
             );
@@ -271,7 +271,7 @@ export default function SignupPage() {
 
         <p className="mt-6 text-center text-sm text-muted-foreground">
           Already have an account?{" "}
-          <Link href="/login" className="font-semibold text-nbn-teal hover:underline">
+          <Link href="/login" className="font-semibold text-EBN-teal hover:underline">
             Sign in
           </Link>
         </p>

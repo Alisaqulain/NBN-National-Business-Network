@@ -17,7 +17,7 @@ export function StatsSection() {
       <div className="absolute inset-0 gradient-bg opacity-95" />
       <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" />
 
-      <div className="container-nbn relative z-10">
+      <div className="container-EBN relative z-10">
         <FadeIn className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-heading font-bold text-white mb-4">
             Numbers That Speak

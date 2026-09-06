@@ -103,16 +103,16 @@ function VerifyOtpContent() {
     <FadeIn className="w-full max-w-md">
       <GlassCard hover={false} className="p-8">
         <div className="mb-6 flex justify-center">
-          <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-nbn-navy/10 to-nbn-teal/10">
-            <ShieldCheck className="h-7 w-7 text-nbn-teal" />
+          <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-EBN-navy/10 to-EBN-teal/10">
+            <ShieldCheck className="h-7 w-7 text-EBN-teal" />
           </div>
         </div>
 
         <div className="mb-8 text-center">
-          <h1 className="font-heading text-2xl font-bold text-nbn-navy">Verify Your Email</h1>
+          <h1 className="font-heading text-2xl font-bold text-EBN-navy">Verify Your Email</h1>
           <p className="mt-2 text-sm text-muted-foreground">
             We sent a 6-digit code to{" "}
-            <span className="font-medium text-nbn-navy">{email || "your email"}</span>
+            <span className="font-medium text-EBN-navy">{email || "your email"}</span>
           </p>
         </div>
 
@@ -155,7 +155,7 @@ function VerifyOtpContent() {
             <button
               type="button"
               onClick={handleResend}
-              className="font-semibold text-nbn-teal hover:underline"
+              className="font-semibold text-EBN-teal hover:underline"
             >
               Resend code
             </button>
@@ -171,7 +171,7 @@ export default function VerifyOtpPage() {
     <Suspense
       fallback={
         <div className="flex w-full max-w-md items-center justify-center py-20">
-          <Loader2 className="h-8 w-8 animate-spin text-nbn-teal" />
+          <Loader2 className="h-8 w-8 animate-spin text-EBN-teal" />
         </div>
       }
     >

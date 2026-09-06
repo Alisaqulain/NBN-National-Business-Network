@@ -91,7 +91,7 @@ export default function DashboardPage() {
       <FadeIn>
         <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <div>
-            <h1 className="font-heading text-2xl font-bold text-nbn-navy lg:text-3xl">
+            <h1 className="font-heading text-2xl font-bold text-EBN-navy lg:text-3xl">
               Good morning, {firstName}! 👋
             </h1>
             <p className="mt-1 text-muted-foreground">
@@ -114,7 +114,7 @@ export default function DashboardPage() {
                 <div className="flex items-start justify-between">
                   <div>
                     <p className="text-sm text-muted-foreground">{stat.label}</p>
-                    <p className="mt-1 font-heading text-2xl font-bold text-nbn-navy">
+                    <p className="mt-1 font-heading text-2xl font-bold text-EBN-navy">
                       {stat.isCurrency ? (
                         formatCurrency(stat.value)
                       ) : (
@@ -203,7 +203,7 @@ export default function DashboardPage() {
           <Card className="border-white/20 bg-white/70 backdrop-blur-xl">
             <CardHeader className="flex flex-row items-center justify-between">
               <CardTitle className="flex items-center gap-2">
-                <Calendar className="h-5 w-5 text-nbn-teal" />
+                <Calendar className="h-5 w-5 text-EBN-teal" />
                 Upcoming Events
               </CardTitle>
               <Button variant="ghost" size="sm">View all</Button>
@@ -211,7 +211,7 @@ export default function DashboardPage() {
             <CardContent className="space-y-4">
               {UPCOMING_EVENTS.map((event) => (
                 <div key={event.id} className="rounded-xl border border-white/30 bg-white/40 p-4 backdrop-blur-sm">
-                  <p className="font-medium text-nbn-navy">{event.title}</p>
+                  <p className="font-medium text-EBN-navy">{event.title}</p>
                   <div className="mt-2 flex flex-wrap gap-2 text-xs text-muted-foreground">
                     <span>{event.date}</span>
                     <span>•</span>
@@ -229,7 +229,7 @@ export default function DashboardPage() {
           <Card className="border-white/20 bg-white/70 backdrop-blur-xl">
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <CheckCircle2 className="h-5 w-5 text-nbn-teal" />
+                <CheckCircle2 className="h-5 w-5 text-EBN-teal" />
                 Tasks
               </CardTitle>
             </CardHeader>
@@ -242,7 +242,7 @@ export default function DashboardPage() {
                     <Circle className="mt-0.5 h-5 w-5 shrink-0 text-muted-foreground" />
                   )}
                   <div className="flex-1">
-                    <p className={`text-sm ${task.done ? "text-muted-foreground line-through" : "text-nbn-navy"}`}>
+                    <p className={`text-sm ${task.done ? "text-muted-foreground line-through" : "text-EBN-navy"}`}>
                       {task.title}
                     </p>
                     <Badge variant={task.priority === "high" ? "destructive" : task.priority === "medium" ? "warning" : "secondary"} className="mt-1">
@@ -259,7 +259,7 @@ export default function DashboardPage() {
           <Card className="border-white/20 bg-white/70 backdrop-blur-xl">
             <CardHeader className="flex flex-row items-center justify-between">
               <CardTitle className="flex items-center gap-2">
-                <Bell className="h-5 w-5 text-nbn-teal" />
+                <Bell className="h-5 w-5 text-EBN-teal" />
                 Notifications
               </CardTitle>
               <Badge variant="secondary">{NOTIFICATIONS.length}</Badge>
@@ -268,7 +268,7 @@ export default function DashboardPage() {
               {NOTIFICATIONS.map((notif) => (
                 <div key={notif.id} className="rounded-xl border border-white/30 bg-white/40 p-3 backdrop-blur-sm">
                   <div className="flex items-start justify-between gap-2">
-                    <p className="text-sm font-medium text-nbn-navy">{notif.title}</p>
+                    <p className="text-sm font-medium text-EBN-navy">{notif.title}</p>
                     <span className="shrink-0 text-xs text-muted-foreground">{notif.time}</span>
                   </div>
                   <p className="mt-1 text-xs text-muted-foreground">{notif.message}</p>
@@ -293,11 +293,11 @@ export default function DashboardPage() {
                 <div
                   key={member.rank}
                   className={`flex items-center gap-4 rounded-xl p-3 ${
-                    member.isYou ? "border border-nbn-teal/30 bg-nbn-teal/5" : "hover:bg-white/40"
+                    member.isYou ? "border border-EBN-teal/30 bg-EBN-teal/5" : "hover:bg-white/40"
                   }`}
                 >
                   <span className={`flex h-8 w-8 items-center justify-center rounded-full text-sm font-bold ${
-                    member.rank <= 3 ? "bg-gradient-to-br from-amber-400 to-amber-600 text-white" : "bg-nbn-navy/10 text-nbn-navy"
+                    member.rank <= 3 ? "bg-gradient-to-br from-amber-400 to-amber-600 text-white" : "bg-EBN-navy/10 text-EBN-navy"
                   }`}>
                     {member.rank}
                   </span>
@@ -306,14 +306,14 @@ export default function DashboardPage() {
                     <AvatarFallback>{member.name.split(" ").map((n) => n[0]).join("")}</AvatarFallback>
                   </Avatar>
                   <div className="flex-1">
-                    <p className="font-medium text-nbn-navy">
+                    <p className="font-medium text-EBN-navy">
                       {member.name}
                       {member.isYou && <Badge variant="secondary" className="ml-2">You</Badge>}
                     </p>
                     <p className="text-xs text-muted-foreground">{member.business}</p>
                   </div>
                   <div className="text-right">
-                    <p className="font-bold text-nbn-teal">{member.referrals}</p>
+                    <p className="font-bold text-EBN-teal">{member.referrals}</p>
                     <p className="text-xs text-muted-foreground">referrals</p>
                   </div>
                 </div>

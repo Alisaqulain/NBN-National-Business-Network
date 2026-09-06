@@ -11,7 +11,7 @@ const TESTIMONIALS = [
     name: "Rajesh Mehta",
     business: "Mehta Constructions",
     category: "Construction",
-    quote: "NBN transformed my business. In just 18 months, I received referrals worth ₹2.4 crore. The structured approach to networking is unmatched.",
+    quote: "EBN transformed my business. In just 18 months, I received referrals worth ₹2.4 crore. The structured approach to networking is unmatched.",
     growthBefore: "₹1.2Cr",
     growthAfter: "₹3.6Cr",
     revenueIncrease: "+200%",
@@ -21,7 +21,7 @@ const TESTIMONIALS = [
     name: "Priya Sharma",
     business: "TechVision Solutions",
     category: "IT & Technology",
-    quote: "The quality of referrals through NBN is exceptional. Every connection has been genuine and has led to real business opportunities.",
+    quote: "The quality of referrals through EBN is exceptional. Every connection has been genuine and has led to real business opportunities.",
     growthBefore: "₹45L",
     growthAfter: "₹1.8Cr",
     revenueIncrease: "+300%",
@@ -31,7 +31,7 @@ const TESTIMONIALS = [
     name: "Amit Patel",
     business: "Patel Financial Services",
     category: "Finance",
-    quote: "Being part of NBN gave me access to a network I could never build alone. My client base grew 4x in two years through trusted referrals.",
+    quote: "Being part of EBN gave me access to a network I could never build alone. My client base grew 4x in two years through trusted referrals.",
     growthBefore: "₹80L",
     growthAfter: "₹3.2Cr",
     revenueIncrease: "+400%",
@@ -41,12 +41,12 @@ const TESTIMONIALS = [
 
 export function TestimonialsSection() {
   return (
-    <section className="section-padding bg-nbn-light dark:bg-nbn-dark/50">
-      <div className="container-nbn">
+    <section className="section-padding bg-EBN-light dark:bg-EBN-dark/50">
+      <div className="container-EBN">
         <SectionHeading
           badge="Success Stories"
           title="Real Results, Real People"
-          subtitle="Hear from entrepreneurs who transformed their businesses through NBN networking."
+          subtitle="Hear from entrepreneurs who transformed their businesses through EBN networking."
         />
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -59,14 +59,14 @@ export function TestimonialsSection() {
                     alt={t.name}
                     width={56}
                     height={56}
-                    className="rounded-full object-cover ring-2 ring-nbn-teal/30"
+                    className="rounded-full object-cover ring-2 ring-EBN-teal/30"
                   />
                   <div>
-                    <h4 className="font-heading font-bold text-nbn-navy dark:text-white">{t.name}</h4>
+                    <h4 className="font-heading font-bold text-EBN-navy dark:text-white">{t.name}</h4>
                     <p className="text-sm text-muted">{t.business}</p>
                     <div className="flex gap-0.5 mt-1">
                       {[...Array(5)].map((_, j) => (
-                        <Star key={j} className="w-3 h-3 fill-nbn-teal text-nbn-teal" />
+                        <Star key={j} className="w-3 h-3 fill-EBN-teal text-EBN-teal" />
                       ))}
                     </div>
                   </div>
@@ -74,14 +74,14 @@ export function TestimonialsSection() {
 
                 <p className="text-muted leading-relaxed mb-6 flex-1 italic">&ldquo;{t.quote}&rdquo;</p>
 
-                <div className="grid grid-cols-3 gap-3 p-4 rounded-xl bg-nbn-navy/5 dark:bg-white/5">
+                <div className="grid grid-cols-3 gap-3 p-4 rounded-xl bg-EBN-navy/5 dark:bg-white/5">
                   <div className="text-center">
                     <p className="text-xs text-muted mb-1">Before</p>
-                    <p className="font-bold text-nbn-navy dark:text-white text-sm">{t.growthBefore}</p>
+                    <p className="font-bold text-EBN-navy dark:text-white text-sm">{t.growthBefore}</p>
                   </div>
                   <div className="text-center">
                     <p className="text-xs text-muted mb-1">After</p>
-                    <p className="font-bold text-nbn-teal text-sm">{t.growthAfter}</p>
+                    <p className="font-bold text-EBN-teal text-sm">{t.growthAfter}</p>
                   </div>
                   <div className="text-center">
                     <p className="text-xs text-muted mb-1">Growth</p>

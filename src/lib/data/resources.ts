@@ -31,8 +31,8 @@ export const RESOURCES: Resource[] = [
   },
   {
     _id: "res-003",
-    title: "NBN Member Handbook 2026",
-    description: "Complete guide to NBN membership, chapter protocols, referral etiquette, and digital tools.",
+    title: "EBN Member Handbook 2026",
+    description: "Complete guide to EBN membership, chapter protocols, referral etiquette, and digital tools.",
     type: "pdf",
     category: "Referrals",
     downloadUrl: "#",
@@ -112,8 +112,8 @@ export const RESOURCES: Resource[] = [
   },
   {
     _id: "res-012",
-    title: "NBN Networking Best Practices (PDF)",
-    description: "Official NBN guide covering dress code, punctuality, one-member-per-category rule, and referral quality standards.",
+    title: "EBN Networking Best Practices (PDF)",
+    description: "Official EBN guide covering dress code, punctuality, one-member-per-category rule, and referral quality standards.",
     type: "pdf",
     category: "Referrals",
     downloadUrl: "#",
@@ -131,6 +131,6 @@ export const RESOURCE_TYPE_ICONS: Record<Resource["type"], string> = {
 export const RESOURCE_TYPE_COLORS: Record<Resource["type"], string> = {
   pdf: "bg-red-500/10 text-red-600",
   video: "bg-purple-500/10 text-purple-600",
-  template: "bg-nbn-teal/10 text-nbn-teal",
+  template: "bg-EBN-teal/10 text-EBN-teal",
   guide: "bg-blue-500/10 text-blue-600",
 };

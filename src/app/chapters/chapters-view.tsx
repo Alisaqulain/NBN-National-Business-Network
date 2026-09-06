@@ -61,7 +61,7 @@ export function ChaptersView() {
 
   return (
     <div className="pt-28 pb-20">
-      <div className="container-nbn">
+      <div className="container-EBN">
         <SectionHeading
           badge="Chapters"
           title="Find a Chapter Near You"
@@ -98,7 +98,7 @@ export function ChaptersView() {
                   id="city"
                   value={city}
                   onChange={(e) => handleFilterChange(setCity)(e.target.value)}
-                  className="flex h-11 w-full rounded-xl border border-nbn-navy/10 bg-white/80 px-4 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-nbn-teal"
+                  className="flex h-11 w-full rounded-xl border border-EBN-navy/10 bg-white/80 px-4 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-EBN-teal"
                 >
                   {CHAPTER_CITIES.map((c) => (
                     <option key={c} value={c}>
@@ -115,7 +115,7 @@ export function ChaptersView() {
                   id="state"
                   value={state}
                   onChange={(e) => handleFilterChange(setState)(e.target.value)}
-                  className="flex h-11 w-full rounded-xl border border-nbn-navy/10 bg-white/80 px-4 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-nbn-teal"
+                  className="flex h-11 w-full rounded-xl border border-EBN-navy/10 bg-white/80 px-4 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-EBN-teal"
                 >
                   {INDIAN_STATES.map((s) => (
                     <option key={s} value={s}>
@@ -132,7 +132,7 @@ export function ChaptersView() {
                   id="category"
                   value={category}
                   onChange={(e) => handleFilterChange(setCategory)(e.target.value)}
-                  className="flex h-11 w-full rounded-xl border border-nbn-navy/10 bg-white/80 px-4 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-nbn-teal"
+                  className="flex h-11 w-full rounded-xl border border-EBN-navy/10 bg-white/80 px-4 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-EBN-teal"
                 >
                   <option value="All Categories">All Categories</option>
                   {BUSINESS_CATEGORIES.map((cat) => (
@@ -170,15 +170,15 @@ export function ChaptersView() {
                     <CardHeader>
                       <div className="flex flex-wrap items-start justify-between gap-3">
                         <div>
-                          <CardTitle className="group-hover:text-nbn-teal transition-colors">
+                          <CardTitle className="group-hover:text-EBN-teal transition-colors">
                             {chapter.name}
                           </CardTitle>
-                          <p className="text-sm text-nbn-teal font-medium mt-1">
+                          <p className="text-sm text-EBN-teal font-medium mt-1">
                             {chapter.city}, {chapter.state}
                           </p>
                         </div>
                         {chapter.category && (
-                          <span className="px-3 py-1 rounded-full text-xs font-semibold bg-nbn-teal/10 text-nbn-teal">
+                          <span className="px-3 py-1 rounded-full text-xs font-semibold bg-EBN-teal/10 text-EBN-teal">
                             {chapter.category}
                           </span>
                         )}
@@ -186,34 +186,34 @@ export function ChaptersView() {
                     </CardHeader>
                     <CardContent className="space-y-3">
                       <div className="flex items-start gap-2 text-sm text-muted">
-                        <MapPin className="w-4 h-4 shrink-0 mt-0.5 text-nbn-teal" />
+                        <MapPin className="w-4 h-4 shrink-0 mt-0.5 text-EBN-teal" />
                         {chapter.address}
                       </div>
                       <div className="flex flex-wrap gap-4 text-sm text-muted">
                         <span className="flex items-center gap-1.5">
-                          <Calendar className="w-4 h-4 text-nbn-navy" />
+                          <Calendar className="w-4 h-4 text-EBN-navy" />
                           {chapter.meetingDay}s
                         </span>
                         <span className="flex items-center gap-1.5">
-                          <Clock className="w-4 h-4 text-nbn-navy" />
+                          <Clock className="w-4 h-4 text-EBN-navy" />
                           {chapter.meetingTime} IST
                         </span>
                         <span className="flex items-center gap-1.5">
-                          <Users className="w-4 h-4 text-nbn-navy" />
+                          <Users className="w-4 h-4 text-EBN-navy" />
                           {chapter.memberCount} members
                         </span>
                       </div>
                       <div className="flex flex-wrap gap-4 text-sm">
                         <a
                           href={`mailto:${chapter.contactEmail}`}
-                          className="flex items-center gap-1.5 text-nbn-teal hover:underline"
+                          className="flex items-center gap-1.5 text-EBN-teal hover:underline"
                         >
                           <Mail className="w-4 h-4" />
                           {chapter.contactEmail}
                         </a>
                         <a
                           href={`tel:${chapter.contactPhone.replace(/\s/g, "")}`}
-                          className="flex items-center gap-1.5 text-nbn-teal hover:underline"
+                          className="flex items-center gap-1.5 text-EBN-teal hover:underline"
                         >
                           <Phone className="w-4 h-4" />
                           {chapter.contactPhone}
@@ -266,20 +266,20 @@ export function ChaptersView() {
             <FadeIn delay={0.2}>
               <div className="sticky top-28">
                 <Card className="overflow-hidden">
-                  <div className="relative h-80 lg:h-[500px] bg-gradient-to-br from-nbn-navy/5 to-nbn-teal/10 flex flex-col items-center justify-center">
-                    <Map className="w-16 h-16 text-nbn-teal/40 mb-4" />
-                    <p className="text-nbn-navy font-heading font-bold text-lg">
+                  <div className="relative h-80 lg:h-[500px] bg-gradient-to-br from-EBN-navy/5 to-EBN-teal/10 flex flex-col items-center justify-center">
+                    <Map className="w-16 h-16 text-EBN-teal/40 mb-4" />
+                    <p className="text-EBN-navy font-heading font-bold text-lg">
                       Interactive Map
                     </p>
                     <p className="text-sm text-muted text-center px-6 mt-2">
                       Chapter locations across India. Map integration coming soon.
                     </p>
                     <div className="absolute inset-0 opacity-20">
-                      <div className="absolute top-1/4 left-1/3 w-3 h-3 rounded-full bg-nbn-teal animate-pulse" />
-                      <div className="absolute top-1/2 left-1/2 w-3 h-3 rounded-full bg-nbn-teal animate-pulse" />
-                      <div className="absolute top-1/3 right-1/4 w-3 h-3 rounded-full bg-nbn-teal animate-pulse" />
-                      <div className="absolute bottom-1/3 left-1/4 w-3 h-3 rounded-full bg-nbn-teal animate-pulse" />
-                      <div className="absolute bottom-1/4 right-1/3 w-3 h-3 rounded-full bg-nbn-teal animate-pulse" />
+                      <div className="absolute top-1/4 left-1/3 w-3 h-3 rounded-full bg-EBN-teal animate-pulse" />
+                      <div className="absolute top-1/2 left-1/2 w-3 h-3 rounded-full bg-EBN-teal animate-pulse" />
+                      <div className="absolute top-1/3 right-1/4 w-3 h-3 rounded-full bg-EBN-teal animate-pulse" />
+                      <div className="absolute bottom-1/3 left-1/4 w-3 h-3 rounded-full bg-EBN-teal animate-pulse" />
+                      <div className="absolute bottom-1/4 right-1/3 w-3 h-3 rounded-full bg-EBN-teal animate-pulse" />
                     </div>
                   </div>
                   <CardContent className="p-4">

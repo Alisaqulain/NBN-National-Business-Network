@@ -71,11 +71,11 @@ export function CategoriesGrid() {
 
   return (
     <section className="section-padding">
-      <div className="container-nbn">
+      <div className="container-EBN">
         <SectionHeading
           badge={`${ALL_BUSINESS_CATEGORIES.length}+ Categories`}
           title="Find Your Industry"
-          subtitle="Search and filter across every business category represented in the NBN network."
+          subtitle="Search and filter across every business category represented in the EBN network."
         />
 
         {/* Search & Filters */}
@@ -94,7 +94,7 @@ export function CategoriesGrid() {
               <button
                 type="button"
                 onClick={() => setSearch("")}
-                className="absolute right-4 top-1/2 -translate-y-1/2 text-muted hover:text-nbn-navy transition-colors"
+                className="absolute right-4 top-1/2 -translate-y-1/2 text-muted hover:text-EBN-navy transition-colors"
                 aria-label="Clear search"
               >
                 <X className="w-4 h-4" />
@@ -112,7 +112,7 @@ export function CategoriesGrid() {
                   "px-4 py-2 rounded-full text-sm font-semibold transition-all",
                   activeGroup === group
                     ? "gradient-bg text-white shadow-lg"
-                    : "glass dark:glass-dark text-muted hover:text-nbn-navy dark:hover:text-white"
+                    : "glass dark:glass-dark text-muted hover:text-EBN-navy dark:hover:text-white"
                 )}
               >
                 {group}
@@ -144,7 +144,7 @@ export function CategoriesGrid() {
                     <span className="text-3xl mb-3 block">
                       {categoryIcons[cat] ?? "💼"}
                     </span>
-                    <span className="text-sm font-semibold text-nbn-navy dark:text-white hover:text-nbn-teal transition-colors">
+                    <span className="text-sm font-semibold text-EBN-navy dark:text-white hover:text-EBN-teal transition-colors">
                       {cat}
                     </span>
                   </GlassCard>

@@ -6,7 +6,7 @@ export async function GET() {
     await connectDB();
     return NextResponse.json({
       success: true,
-      message: "NBN API is running",
+      message: "EBN API is running",
       timestamp: new Date().toISOString(),
     });
   } catch {

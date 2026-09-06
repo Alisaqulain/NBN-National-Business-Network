@@ -92,9 +92,9 @@ export default function LoginPage() {
     <FadeIn className="w-full max-w-md">
       <GlassCard hover={false} className="p-8">
         <div className="mb-8 text-center">
-          <h1 className="font-heading text-2xl font-bold text-nbn-navy">Welcome Back</h1>
+          <h1 className="font-heading text-2xl font-bold text-EBN-navy">Welcome Back</h1>
           <p className="mt-2 text-sm text-muted-foreground">
-            Sign in to your NBN member account
+            Sign in to your EBN member account
           </p>
         </div>
 
@@ -110,7 +110,7 @@ export default function LoginPage() {
 
         <div className="relative mb-6">
           <div className="absolute inset-0 flex items-center">
-            <div className="w-full border-t border-nbn-navy/10" />
+            <div className="w-full border-t border-EBN-navy/10" />
           </div>
           <div className="relative flex justify-center text-xs uppercase">
             <span className="bg-white/70 px-3 text-muted-foreground backdrop-blur-sm">or continue with email</span>
@@ -144,7 +144,7 @@ export default function LoginPage() {
               <button
                 type="button"
                 onClick={() => setShowPassword(!showPassword)}
-                className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-nbn-navy"
+                className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-EBN-navy"
               >
                 {showPassword ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
               </button>
@@ -164,7 +164,7 @@ export default function LoginPage() {
             </label>
             <Link
               href="/forgot-password"
-              className="text-sm font-medium text-nbn-teal hover:underline"
+              className="text-sm font-medium text-EBN-teal hover:underline"
             >
               Forgot password?
             </Link>
@@ -184,7 +184,7 @@ export default function LoginPage() {
 
         <p className="mt-6 text-center text-sm text-muted-foreground">
           Don&apos;t have an account?{" "}
-          <Link href="/signup" className="font-semibold text-nbn-teal hover:underline">
+          <Link href="/signup" className="font-semibold text-EBN-teal hover:underline">
             Create account
           </Link>
         </p>

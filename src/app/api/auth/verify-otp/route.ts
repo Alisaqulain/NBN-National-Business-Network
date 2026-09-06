@@ -26,7 +26,7 @@ export async function POST(req: NextRequest) {
 
     const token = signToken({ userId: user._id.toString(), email: user.email, role: user.role });
     const response = apiSuccess({ user: formatUser(user), token }, "Email verified");
-    response.cookies.set("nbn_token", token, {
+    response.cookies.set("ebn_token", token, {
       httpOnly: true,
       secure: process.env.NODE_ENV === "production",
       sameSite: "lax",

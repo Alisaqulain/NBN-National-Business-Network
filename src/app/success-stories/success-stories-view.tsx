@@ -34,11 +34,11 @@ export function SuccessStoriesView() {
 
   return (
     <div className="pt-28 pb-20">
-      <div className="container-nbn">
+      <div className="container-EBN">
         <SectionHeading
           badge="Success Stories"
           title="Real Results, Real People"
-          subtitle="Discover how Indian entrepreneurs transformed their businesses through NBN's referral-based networking."
+          subtitle="Discover how Indian entrepreneurs transformed their businesses through EBN's referral-based networking."
         />
 
         {/* Impact Stats */}
@@ -46,7 +46,7 @@ export function SuccessStoriesView() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
             {STATS.map((stat) => (
               <GlassCard key={stat.label} hover={false} className="text-center">
-                <p className="text-3xl font-heading font-bold text-nbn-navy dark:text-white">
+                <p className="text-3xl font-heading font-bold text-EBN-navy dark:text-white">
                   <AnimatedCounter
                     value={stat.value}
                     prefix={"prefix" in stat ? stat.prefix : ""}
@@ -72,7 +72,7 @@ export function SuccessStoriesView() {
                     className="object-cover"
                     sizes="(max-width: 1024px) 100vw, 50vw"
                   />
-                  <div className="absolute inset-0 bg-nbn-navy/40 flex flex-col items-center justify-center">
+                  <div className="absolute inset-0 bg-EBN-navy/40 flex flex-col items-center justify-center">
                     <button
                       onClick={() => setIsPlaying(true)}
                       className="w-20 h-20 rounded-full gradient-bg flex items-center justify-center shadow-2xl hover:scale-110 transition-transform"
@@ -86,7 +86,7 @@ export function SuccessStoriesView() {
                   </div>
                 </>
               ) : (
-                <div className="absolute inset-0 bg-nbn-navy flex flex-col items-center justify-center text-white p-8">
+                <div className="absolute inset-0 bg-EBN-navy flex flex-col items-center justify-center text-white p-8">
                   <Play className="w-12 h-12 mb-4 opacity-50" />
                   <p className="text-center text-lg font-heading">
                     Video player would load here
@@ -103,10 +103,10 @@ export function SuccessStoriesView() {
               )}
             </div>
             <div className="flex flex-col justify-center">
-              <span className="inline-block mb-4 px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase bg-nbn-teal/10 text-nbn-teal border border-nbn-teal/20 w-fit">
+              <span className="inline-block mb-4 px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase bg-EBN-teal/10 text-EBN-teal border border-EBN-teal/20 w-fit">
                 Featured Documentary
               </span>
-              <h3 className="text-2xl md:text-3xl font-heading font-bold text-nbn-navy dark:text-white mb-4">
+              <h3 className="text-2xl md:text-3xl font-heading font-bold text-EBN-navy dark:text-white mb-4">
                 {FEATURED_VIDEO.title}
               </h3>
               <p className="text-muted leading-relaxed mb-6">
@@ -124,7 +124,7 @@ export function SuccessStoriesView() {
         <FadeIn>
           <div className="mb-16">
             <div className="flex items-center justify-between mb-8">
-              <h3 className="text-2xl font-heading font-bold text-nbn-navy dark:text-white">
+              <h3 className="text-2xl font-heading font-bold text-EBN-navy dark:text-white">
                 Member Success Carousel
               </h3>
               <div className="flex gap-2">
@@ -153,37 +153,37 @@ export function SuccessStoriesView() {
                         alt={active.name}
                         width={160}
                         height={160}
-                        className="rounded-2xl object-cover ring-4 ring-nbn-teal/20"
+                        className="rounded-2xl object-cover ring-4 ring-EBN-teal/20"
                       />
                     </div>
                     <div className="flex-1 text-center md:text-left">
                       <div className="flex flex-wrap items-center justify-center md:justify-start gap-2 mb-3">
-                        <span className="px-3 py-1 rounded-full text-xs font-semibold bg-nbn-teal/10 text-nbn-teal">
+                        <span className="px-3 py-1 rounded-full text-xs font-semibold bg-EBN-teal/10 text-EBN-teal">
                           {active.category}
                         </span>
                         <div className="flex gap-0.5">
                           {[...Array(5)].map((_, j) => (
-                            <Star key={j} className="w-3.5 h-3.5 fill-nbn-teal text-nbn-teal" />
+                            <Star key={j} className="w-3.5 h-3.5 fill-EBN-teal text-EBN-teal" />
                           ))}
                         </div>
                       </div>
-                      <h4 className="text-xl font-heading font-bold text-nbn-navy dark:text-white">
+                      <h4 className="text-xl font-heading font-bold text-EBN-navy dark:text-white">
                         {active.name}
                       </h4>
-                      <p className="text-nbn-teal font-medium mb-4">{active.business}</p>
+                      <p className="text-EBN-teal font-medium mb-4">{active.business}</p>
                       <p className="text-muted italic leading-relaxed mb-6">
                         &ldquo;{active.quote}&rdquo;
                       </p>
-                      <div className="grid grid-cols-3 gap-4 p-4 rounded-xl bg-nbn-navy/5 dark:bg-white/5">
+                      <div className="grid grid-cols-3 gap-4 p-4 rounded-xl bg-EBN-navy/5 dark:bg-white/5">
                         <div className="text-center">
                           <p className="text-xs text-muted mb-1">Before</p>
-                          <p className="font-bold text-nbn-navy dark:text-white">
+                          <p className="font-bold text-EBN-navy dark:text-white">
                             {active.growthBefore}
                           </p>
                         </div>
                         <div className="text-center">
                           <p className="text-xs text-muted mb-1">After</p>
-                          <p className="font-bold text-nbn-teal">{active.growthAfter}</p>
+                          <p className="font-bold text-EBN-teal">{active.growthAfter}</p>
                         </div>
                         <div className="text-center">
                           <p className="text-xs text-muted mb-1 flex items-center justify-center gap-1">
@@ -204,7 +204,7 @@ export function SuccessStoriesView() {
                     key={i}
                     onClick={() => setActiveIndex(i)}
                     className={`w-2.5 h-2.5 rounded-full transition-all ${
-                      i === activeIndex ? "gradient-bg w-8" : "bg-nbn-navy/20"
+                      i === activeIndex ? "gradient-bg w-8" : "bg-EBN-navy/20"
                     }`}
                     aria-label={`Go to story ${i + 1}`}
                   />
@@ -225,29 +225,29 @@ export function SuccessStoriesView() {
                     alt={story.name}
                     width={56}
                     height={56}
-                    className="rounded-full object-cover ring-2 ring-nbn-teal/30"
+                    className="rounded-full object-cover ring-2 ring-EBN-teal/30"
                   />
                   <div>
-                    <h4 className="font-heading font-bold text-nbn-navy dark:text-white">
+                    <h4 className="font-heading font-bold text-EBN-navy dark:text-white">
                       {story.name}
                     </h4>
                     <p className="text-sm text-muted">{story.business}</p>
-                    <span className="text-xs text-nbn-teal">{story.category}</span>
+                    <span className="text-xs text-EBN-teal">{story.category}</span>
                   </div>
                 </div>
                 <p className="text-muted leading-relaxed mb-6 flex-1 italic text-sm">
                   &ldquo;{story.quote.slice(0, 120)}...&rdquo;
                 </p>
-                <div className="grid grid-cols-3 gap-2 p-3 rounded-xl bg-nbn-navy/5 dark:bg-white/5 text-center">
+                <div className="grid grid-cols-3 gap-2 p-3 rounded-xl bg-EBN-navy/5 dark:bg-white/5 text-center">
                   <div>
                     <p className="text-[10px] text-muted uppercase">Before</p>
-                    <p className="font-bold text-sm text-nbn-navy dark:text-white">
+                    <p className="font-bold text-sm text-EBN-navy dark:text-white">
                       {story.growthBefore}
                     </p>
                   </div>
                   <div>
                     <p className="text-[10px] text-muted uppercase">After</p>
-                    <p className="font-bold text-sm text-nbn-teal">{story.growthAfter}</p>
+                    <p className="font-bold text-sm text-EBN-teal">{story.growthAfter}</p>
                   </div>
                   <div>
                     <p className="text-[10px] text-muted uppercase">Growth</p>

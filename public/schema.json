@@ -1,11 +1,11 @@
 {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "name": "National Business Network",
-  "alternateName": "NBN",
-  "url": "https://nbn.in",
-  "logo": "https://nbn.in/logo.svg",
-  "description": "India's premier business networking platform connecting entrepreneurs through trusted relationships and quality referrals.",
+  "name": "Entrepreneur Business Network",
+  "alternateName": "EBN",
+  "url": "https://ebn.in",
+  "logo": "https://ebn.in/EBN%20Logo.png",
+  "description": "India's premier entrepreneur networking platform connecting business owners through trusted relationships and quality referrals.",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "123 Business Park, Bandra Kurla Complex",
@@ -15,12 +15,12 @@
   },
   "contactPoint": {
     "@type": "ContactPoint",
-    "telephone": "+91-1800-NBN-NETWORK",
+    "telephone": "+91-1800-EBN-NETWORK",
     "contactType": "customer service",
-    "email": "hello@nbn.in"
+    "email": "hello@ebn.in"
   },
   "sameAs": [
-    "https://linkedin.com/company/nbn-india",
-    "https://twitter.com/nbn_india"
+    "https://linkedin.com/company/ebn-india",
+    "https://twitter.com/ebn_india"
   ]
 }

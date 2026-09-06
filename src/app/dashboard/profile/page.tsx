@@ -99,7 +99,7 @@ export default function ProfilePage() {
     <div className="mx-auto max-w-3xl space-y-8">
       <FadeIn>
         <div>
-          <h1 className="font-heading text-2xl font-bold text-nbn-navy lg:text-3xl">Profile</h1>
+          <h1 className="font-heading text-2xl font-bold text-EBN-navy lg:text-3xl">Profile</h1>
           <p className="mt-1 text-muted-foreground">Manage your personal and business information</p>
         </div>
       </FadeIn>
@@ -112,17 +112,17 @@ export default function ProfilePage() {
                 <AvatarImage src={avatarPreview} />
                 <AvatarFallback className="text-2xl">{initials}</AvatarFallback>
               </Avatar>
-              <label className="absolute -bottom-1 -right-1 flex h-8 w-8 cursor-pointer items-center justify-center rounded-full bg-gradient-to-r from-nbn-navy to-nbn-teal text-white shadow-lg">
+              <label className="absolute -bottom-1 -right-1 flex h-8 w-8 cursor-pointer items-center justify-center rounded-full bg-gradient-to-r from-EBN-navy to-EBN-teal text-white shadow-lg">
                 <Camera className="h-4 w-4" />
                 <input type="file" accept="image/*" className="hidden" onChange={handleAvatarChange} />
               </label>
             </div>
             <div className="text-center sm:text-left">
-              <h2 className="font-heading text-xl font-bold text-nbn-navy">
+              <h2 className="font-heading text-xl font-bold text-EBN-navy">
                 {user ? `${user.firstName} ${user.lastName}` : "Member Name"}
               </h2>
-              <p className="text-sm text-muted-foreground">{user?.email ?? "member@nbn.in"}</p>
-              <p className="mt-1 text-xs capitalize text-nbn-teal">
+              <p className="text-sm text-muted-foreground">{user?.email ?? "member@ebn.in"}</p>
+              <p className="mt-1 text-xs capitalize text-EBN-teal">
                 {user?.membershipStatus ?? "active"} member
               </p>
             </div>
@@ -217,7 +217,7 @@ export default function ProfilePage() {
           <Card className="border-white/20 bg-white/70 backdrop-blur-xl">
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <Link2 className="h-5 w-5 text-nbn-teal" />
+                <Link2 className="h-5 w-5 text-EBN-teal" />
                 Social Links
               </CardTitle>
             </CardHeader>

@@ -15,8 +15,8 @@ const categoryIcons: Record<string, string> = {
 
 export function CategoriesPreview() {
   return (
-    <section className="section-padding bg-nbn-light dark:bg-nbn-dark/50">
-      <div className="container-nbn">
+    <section className="section-padding bg-EBN-light dark:bg-EBN-dark/50">
+      <div className="container-EBN">
         <SectionHeading
           badge="Categories"
           title="Every Industry, Every Opportunity"
@@ -34,7 +34,7 @@ export function CategoriesPreview() {
                   <span className="text-3xl mb-3 block group-hover:scale-110 transition-transform">
                     {categoryIcons[cat] ?? "💼"}
                   </span>
-                  <span className="text-sm font-semibold text-nbn-navy dark:text-white group-hover:text-nbn-teal transition-colors">
+                  <span className="text-sm font-semibold text-EBN-navy dark:text-white group-hover:text-EBN-teal transition-colors">
                     {cat}
                   </span>
                 </Link>
@@ -44,7 +44,7 @@ export function CategoriesPreview() {
           <FadeIn delay={0.5}>
             <Link
               href="/categories"
-              className="flex flex-col items-center justify-center p-5 rounded-2xl border-2 border-dashed border-nbn-teal/30 text-nbn-teal hover:bg-nbn-teal/5 transition-colors h-full min-h-[120px]"
+              className="flex flex-col items-center justify-center p-5 rounded-2xl border-2 border-dashed border-EBN-teal/30 text-EBN-teal hover:bg-EBN-teal/5 transition-colors h-full min-h-[120px]"
             >
               <span className="text-2xl mb-2">+30</span>
               <span className="text-sm font-semibold">More Categories</span>

@@ -100,16 +100,16 @@ function ReferralCard({ referral }: { referral: ReferralItem }) {
         </Avatar>
         <div className="flex-1 min-w-0">
           <div className="flex flex-wrap items-center gap-2">
-            <p className="font-medium text-nbn-navy">{person.name}</p>
+            <p className="font-medium text-EBN-navy">{person.name}</p>
             <Badge variant={STATUS_VARIANT[referral.status]}>{referral.status}</Badge>
             <Badge variant="outline">{referral.direction}</Badge>
           </div>
           <p className="text-xs text-muted-foreground">{person.business}</p>
-          <p className="mt-2 text-sm text-nbn-navy/80">{referral.description}</p>
+          <p className="mt-2 text-sm text-EBN-navy/80">{referral.description}</p>
           <div className="mt-3 flex flex-wrap items-center gap-4 text-xs text-muted-foreground">
             <span>{referral.createdAt}</span>
             {referral.value && (
-              <span className="font-medium text-nbn-teal">{formatCurrency(referral.value)}</span>
+              <span className="font-medium text-EBN-teal">{formatCurrency(referral.value)}</span>
             )}
           </div>
         </div>
@@ -166,7 +166,7 @@ export default function ReferralsPage() {
       <FadeIn>
         <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <div>
-            <h1 className="font-heading text-2xl font-bold text-nbn-navy lg:text-3xl">Referrals</h1>
+            <h1 className="font-heading text-2xl font-bold text-EBN-navy lg:text-3xl">Referrals</h1>
             <p className="mt-1 text-muted-foreground">Create and track your business referrals</p>
           </div>
           <Button onClick={() => setShowForm(!showForm)}>
@@ -180,7 +180,7 @@ export default function ReferralsPage() {
         {(["pending", "accepted", "completed"] as const).map((status, i) => (
           <FadeIn key={status} delay={i * 0.1}>
             <GlassCard hover={false} className="p-5 text-center">
-              <p className="text-3xl font-bold text-nbn-navy">{stats[status]}</p>
+              <p className="text-3xl font-bold text-EBN-navy">{stats[status]}</p>
               <p className="mt-1 text-sm capitalize text-muted-foreground">{status}</p>
             </GlassCard>
           </FadeIn>
@@ -192,7 +192,7 @@ export default function ReferralsPage() {
           <Card className="border-white/20 bg-white/70 backdrop-blur-xl">
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <Send className="h-5 w-5 text-nbn-teal" />
+                <Send className="h-5 w-5 text-EBN-teal" />
                 Send New Referral
               </CardTitle>
             </CardHeader>
@@ -245,7 +245,7 @@ export default function ReferralsPage() {
           {(["pending", "accepted", "completed"] as const).map((status) => (
             <TabsContent key={status} value={status} className="space-y-3">
               {filterReferrals(status).length === 0 ? (
-                <div className="rounded-xl border border-dashed border-nbn-navy/20 p-8 text-center text-muted-foreground">
+                <div className="rounded-xl border border-dashed border-EBN-navy/20 p-8 text-center text-muted-foreground">
                   No {status} referrals found
                 </div>
               ) : (

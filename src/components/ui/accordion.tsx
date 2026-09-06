@@ -13,7 +13,7 @@ const AccordionItem = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <AccordionPrimitive.Item
     ref={ref}
-    className={cn("border-b border-nbn-navy/10 dark:border-white/10", className)}
+    className={cn("border-b border-EBN-navy/10 dark:border-white/10", className)}
     {...props}
   />
 ));
@@ -27,7 +27,7 @@ const AccordionTrigger = React.forwardRef<
     <AccordionPrimitive.Trigger
       ref={ref}
       className={cn(
-        "flex flex-1 items-center justify-between py-5 font-semibold text-nbn-navy transition-all hover:text-nbn-teal dark:text-white [&[data-state=open]>svg]:rotate-180",
+        "flex flex-1 items-center justify-between py-5 font-semibold text-EBN-navy transition-all hover:text-EBN-teal dark:text-white [&[data-state=open]>svg]:rotate-180",
         className
       )}
       {...props}

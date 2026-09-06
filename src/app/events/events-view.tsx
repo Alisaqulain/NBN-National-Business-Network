@@ -38,20 +38,20 @@ export function EventsView() {
 
   return (
     <div className="pt-28 pb-20">
-      <div className="container-nbn">
+      <div className="container-EBN">
         <SectionHeading
           badge="Events"
           title="Upcoming Events & Workshops"
-          subtitle="Connect, learn, and grow at exclusive NBN events across India — from Mumbai summits to nationwide webinars."
+          subtitle="Connect, learn, and grow at exclusive EBN events across India — from Mumbai summits to nationwide webinars."
         />
 
         {/* Countdown to Next Event */}
         <FadeIn>
           <GlassCard hover={false} className="mb-12 text-center">
-            <span className="inline-block mb-3 px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase bg-nbn-teal/10 text-nbn-teal border border-nbn-teal/20">
+            <span className="inline-block mb-3 px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase bg-EBN-teal/10 text-EBN-teal border border-EBN-teal/20">
               Next Event
             </span>
-            <h3 className="text-2xl md:text-3xl font-heading font-bold text-nbn-navy dark:text-white mb-2">
+            <h3 className="text-2xl md:text-3xl font-heading font-bold text-EBN-navy dark:text-white mb-2">
               {nextEvent.title}
             </h3>
             <p className="text-muted mb-6">
@@ -68,7 +68,7 @@ export function EventsView() {
         {/* Type Filter */}
         <FadeIn>
           <div className="flex flex-wrap items-center gap-4 mb-10">
-            <div className="flex items-center gap-2 text-nbn-navy font-medium">
+            <div className="flex items-center gap-2 text-EBN-navy font-medium">
               <Filter className="w-4 h-4" />
               Filter by type:
             </div>
@@ -91,7 +91,7 @@ export function EventsView() {
 
         {/* Timeline / Cards */}
         <div className="relative">
-          <div className="absolute left-6 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-nbn-navy/20 via-nbn-teal/40 to-nbn-navy/20 hidden md:block md:-translate-x-1/2" />
+          <div className="absolute left-6 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-EBN-navy/20 via-EBN-teal/40 to-EBN-navy/20 hidden md:block md:-translate-x-1/2" />
 
           <div className="space-y-8">
             {filtered.map((event, i) => {
@@ -145,7 +145,7 @@ export function EventsView() {
                             </span>
                           )}
                         </div>
-                        <h3 className="text-xl font-heading font-bold text-nbn-navy dark:text-white mb-2">
+                        <h3 className="text-xl font-heading font-bold text-EBN-navy dark:text-white mb-2">
                           {event.title}
                         </h3>
                         <p className="text-muted text-sm leading-relaxed mb-4">
@@ -154,22 +154,22 @@ export function EventsView() {
                         <div className="flex flex-wrap gap-4 text-sm text-muted mb-5">
                           <span className="flex items-center gap-1.5">
                             {event.isVirtual ? (
-                              <Video className="w-4 h-4 text-nbn-teal" />
+                              <Video className="w-4 h-4 text-EBN-teal" />
                             ) : (
-                              <MapPin className="w-4 h-4 text-nbn-teal" />
+                              <MapPin className="w-4 h-4 text-EBN-teal" />
                             )}
                             {event.location}
                           </span>
                           <span className="flex items-center gap-1.5">
-                            <Clock className="w-4 h-4 text-nbn-navy" />
+                            <Clock className="w-4 h-4 text-EBN-navy" />
                             {format(eventDate, "h:mm a")} IST
                           </span>
                           <span className="flex items-center gap-1.5">
-                            <Users className="w-4 h-4 text-nbn-navy" />
+                            <Users className="w-4 h-4 text-EBN-navy" />
                             {event.currentAttendees}/{event.maxAttendees}
                           </span>
                           <span className="flex items-center gap-1.5">
-                            <Calendar className="w-4 h-4 text-nbn-navy" />
+                            <Calendar className="w-4 h-4 text-EBN-navy" />
                             {event.city}
                           </span>
                         </div>
@@ -184,7 +184,7 @@ export function EventsView() {
                               % full
                             </span>
                           </div>
-                          <div className="h-2 rounded-full bg-nbn-navy/10 overflow-hidden">
+                          <div className="h-2 rounded-full bg-EBN-navy/10 overflow-hidden">
                             <div
                               className="h-full gradient-bg rounded-full transition-all"
                               style={{

@@ -64,7 +64,7 @@ export async function loginUser(email: string, password: string) {
 
     const token = signToken({ userId: user._id.toString(), email: user.email, role: user.role });
     const cookieStore = await cookies();
-    cookieStore.set("nbn_token", token, {
+    cookieStore.set("ebn_token", token, {
       httpOnly: true,
       secure: process.env.NODE_ENV === "production",
       sameSite: "lax",
@@ -96,7 +96,7 @@ export async function verifyOtp(email: string, otp: string) {
 
     const token = signToken({ userId: user._id.toString(), email: user.email, role: user.role });
     const cookieStore = await cookies();
-    cookieStore.set("nbn_token", token, {
+    cookieStore.set("ebn_token", token, {
       httpOnly: true,
       secure: process.env.NODE_ENV === "production",
       sameSite: "lax",
@@ -113,6 +113,6 @@ export async function verifyOtp(email: string, otp: string) {
 
 export async function logoutUser() {
   const cookieStore = await cookies();
-  cookieStore.delete("nbn_token");
+  cookieStore.delete("ebn_token");
   return { success: true };
 }

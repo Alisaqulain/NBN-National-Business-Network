@@ -24,7 +24,7 @@ const EVENTS = [
     maxAttendees: 150,
   },
   {
-    title: "NBN National Business Expo",
+    title: "EBN National Business Expo",
     type: "Business Expo",
     date: new Date("2026-09-05"),
     location: "Pragati Maidan, New Delhi",
@@ -51,11 +51,11 @@ const typeColors: Record<string, string> = {
 export function EventsPreview() {
   return (
     <section className="section-padding">
-      <div className="container-nbn">
+      <div className="container-EBN">
         <SectionHeading
           badge="Events"
           title="Upcoming Events"
-          subtitle="Connect, learn, and grow at exclusive NBN events across the country."
+          subtitle="Connect, learn, and grow at exclusive EBN events across the country."
         />
 
         <div className="grid md:grid-cols-2 gap-6">
@@ -71,7 +71,7 @@ export function EventsPreview() {
                     <span className={`inline-block px-3 py-1 rounded-full text-xs font-semibold mb-2 ${typeColors[event.type]}`}>
                       {event.type}
                     </span>
-                    <h3 className="text-lg font-heading font-bold text-nbn-navy dark:text-white mb-2 group-hover:text-nbn-teal transition-colors">
+                    <h3 className="text-lg font-heading font-bold text-EBN-navy dark:text-white mb-2 group-hover:text-EBN-teal transition-colors">
                       {event.title}
                     </h3>
                     <div className="flex flex-wrap gap-4 text-sm text-muted">
@@ -81,8 +81,8 @@ export function EventsPreview() {
                     </div>
                   </div>
                 </div>
-                <div className="mt-4 pt-4 border-t border-nbn-navy/5 flex justify-between items-center">
-                  <Link href="/events" className="text-sm font-semibold text-nbn-teal hover:underline">
+                <div className="mt-4 pt-4 border-t border-EBN-navy/5 flex justify-between items-center">
+                  <Link href="/events" className="text-sm font-semibold text-EBN-teal hover:underline">
                     View Details
                   </Link>
                   <Button size="sm">Register</Button>

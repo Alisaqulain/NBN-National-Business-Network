@@ -1,6 +1,7 @@
 export const BRAND = {
-  name: "National Business Network",
-  shortName: "NBN",
+  name: "Entrepreneur Business Network",
+  shortName: "EBN",
+  logo: "/EBN Logo.png",
   tagline: "Grow Your Business Through Trusted Relationships",
   colors: {
     navy: "#143055",

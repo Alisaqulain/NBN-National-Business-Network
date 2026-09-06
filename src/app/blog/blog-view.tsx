@@ -36,7 +36,7 @@ export function BlogView() {
 
   return (
     <div className="pt-28 pb-20">
-      <div className="container-nbn">
+      <div className="container-EBN">
         <SectionHeading
           badge="Blog"
           title="Insights & Business Growth"
@@ -62,10 +62,10 @@ export function BlogView() {
                   </span>
                 </div>
                 <div className="p-8 flex flex-col justify-center">
-                  <span className="text-nbn-teal text-sm font-semibold mb-2">
+                  <span className="text-EBN-teal text-sm font-semibold mb-2">
                     {featured.category}
                   </span>
-                  <h3 className="text-2xl md:text-3xl font-heading font-bold text-nbn-navy dark:text-white mb-3 group-hover:text-nbn-teal transition-colors">
+                  <h3 className="text-2xl md:text-3xl font-heading font-bold text-EBN-navy dark:text-white mb-3 group-hover:text-EBN-teal transition-colors">
                     {featured.title}
                   </h3>
                   <p className="text-muted leading-relaxed mb-4">{featured.excerpt}</p>
@@ -113,7 +113,7 @@ export function BlogView() {
                   id="blog-category"
                   value={category}
                   onChange={(e) => setCategory(e.target.value)}
-                  className="flex h-11 w-full rounded-xl border border-nbn-navy/10 bg-white/80 px-4 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-nbn-teal"
+                  className="flex h-11 w-full rounded-xl border border-EBN-navy/10 bg-white/80 px-4 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-EBN-teal"
                 >
                   {BLOG_CATEGORIES.map((cat) => (
                     <option key={cat} value={cat}>
@@ -159,12 +159,12 @@ export function BlogView() {
                         className="object-cover group-hover:scale-105 transition-transform duration-500"
                         sizes="(max-width: 768px) 100vw, 33vw"
                       />
-                      <span className="absolute top-3 left-3 px-2.5 py-1 rounded-full text-xs font-semibold bg-white/90 text-nbn-navy">
+                      <span className="absolute top-3 left-3 px-2.5 py-1 rounded-full text-xs font-semibold bg-white/90 text-EBN-navy">
                         {post.category}
                       </span>
                     </div>
                     <CardContent className="p-6">
-                      <h3 className="text-lg font-heading font-bold text-nbn-navy dark:text-white mb-2 group-hover:text-nbn-teal transition-colors line-clamp-2">
+                      <h3 className="text-lg font-heading font-bold text-EBN-navy dark:text-white mb-2 group-hover:text-EBN-teal transition-colors line-clamp-2">
                         {post.title}
                       </h3>
                       <p className="text-sm text-muted leading-relaxed mb-4 line-clamp-3">
@@ -183,7 +183,7 @@ export function BlogView() {
                         </div>
                         <span>{format(new Date(post.publishedAt), "MMM d")}</span>
                       </div>
-                      <span className="inline-flex items-center gap-1 text-sm font-semibold text-nbn-teal mt-4 group-hover:gap-2 transition-all">
+                      <span className="inline-flex items-center gap-1 text-sm font-semibold text-EBN-teal mt-4 group-hover:gap-2 transition-all">
                         Read More
                         <ArrowRight className="w-4 h-4" />
                       </span>

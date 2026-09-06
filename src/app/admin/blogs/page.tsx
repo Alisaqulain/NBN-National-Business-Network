@@ -29,11 +29,11 @@ interface AdminBlog {
 }
 
 const MOCK_BLOGS: AdminBlog[] = [
-  { id: "1", title: "10 Strategies to Maximize Business Referrals", category: "Networking", author: "NBN Editorial", status: "published", publishedAt: "2026-07-20", readingTime: 8, views: 2450 },
+  { id: "1", title: "10 Strategies to Maximize Business Referrals", category: "Networking", author: "EBN Editorial", status: "published", publishedAt: "2026-07-20", readingTime: 8, views: 2450 },
   { id: "2", title: "Building Trust in Business Relationships", category: "Leadership", author: "Priya Mehta", status: "published", publishedAt: "2026-07-15", readingTime: 6, views: 1820 },
   { id: "3", title: "Digital Transformation for SMEs", category: "Technology", author: "Rajesh Kumar", status: "published", publishedAt: "2026-07-10", readingTime: 10, views: 3100 },
   { id: "4", title: "Chapter Leadership Best Practices", category: "Leadership", author: "Admin", status: "draft", publishedAt: "—", readingTime: 7, views: 0 },
-  { id: "5", title: "Annual Networking Trends Report 2026", category: "Insights", author: "NBN Research", status: "published", publishedAt: "2026-07-01", readingTime: 15, views: 5200 },
+  { id: "5", title: "Annual Networking Trends Report 2026", category: "Insights", author: "EBN Research", status: "published", publishedAt: "2026-07-01", readingTime: 15, views: 5200 },
   { id: "6", title: "Legacy Member Success Stories", category: "Success Stories", author: "Content Team", status: "archived", publishedAt: "2025-12-15", readingTime: 12, views: 8900 },
 ];
 
@@ -64,7 +64,7 @@ export default function AdminBlogsPage() {
       <FadeIn>
         <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <div>
-            <h1 className="font-heading text-2xl font-bold text-nbn-navy lg:text-3xl">Blogs</h1>
+            <h1 className="font-heading text-2xl font-bold text-EBN-navy lg:text-3xl">Blogs</h1>
             <p className="mt-1 text-muted-foreground">Manage blog posts and content</p>
           </div>
           <Button>

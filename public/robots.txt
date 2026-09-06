@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://nbn.in/sitemap.xml
+Sitemap: https://ebn.in/sitemap.xml

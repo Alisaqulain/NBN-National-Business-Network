@@ -78,7 +78,7 @@ export function GlassCard({
     <motion.div
       whileHover={hover ? { y: -8, scale: 1.02 } : undefined}
       transition={{ type: "spring", stiffness: 300, damping: 20 }}
-      className={`rounded-2xl border border-white/20 bg-white/70 backdrop-blur-xl p-6 shadow-lg shadow-nbn-navy/5 dark:bg-white/5 dark:border-white/10 ${className ?? ""}`}
+      className={`rounded-2xl border border-white/20 bg-white/70 backdrop-blur-xl p-6 shadow-lg shadow-EBN-navy/5 dark:bg-white/5 dark:border-white/10 ${className ?? ""}`}
     >
       {children}
     </motion.div>
@@ -99,11 +99,11 @@ export function SectionHeading({
   return (
     <FadeIn className={centered ? "text-center mb-16" : "mb-16"}>
       {badge && (
-        <span className="inline-block mb-4 px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase bg-nbn-teal/10 text-nbn-teal border border-nbn-teal/20">
+        <span className="inline-block mb-4 px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase bg-EBN-teal/10 text-EBN-teal border border-EBN-teal/20">
           {badge}
         </span>
       )}
-      <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-nbn-navy dark:text-white mb-4">
+      <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-EBN-navy dark:text-white mb-4">
         {title}
       </h2>
       {subtitle && (

@@ -29,13 +29,13 @@ function HeroIllustration() {
         <motion.div
           animate={{ rotate: 360 }}
           transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
-          className="w-64 h-64 md:w-80 md:h-80 rounded-full border-2 border-nbn-teal/30 relative"
+          className="w-64 h-64 md:w-80 md:h-80 rounded-full border-2 border-EBN-teal/30 relative"
         >
-          <div className="absolute inset-4 rounded-full bg-gradient-to-br from-nbn-navy/20 to-nbn-teal/20 backdrop-blur-sm" />
+          <div className="absolute inset-4 rounded-full bg-gradient-to-br from-EBN-navy/20 to-EBN-teal/20 backdrop-blur-sm" />
           {[...Array(8)].map((_, i) => (
             <motion.div
               key={i}
-              className="absolute w-3 h-3 rounded-full bg-nbn-teal"
+              className="absolute w-3 h-3 rounded-full bg-EBN-teal"
               style={{
                 top: `${50 + 40 * Math.sin((i * Math.PI) / 4)}%`,
                 left: `${50 + 40 * Math.cos((i * Math.PI) / 4)}%`,
@@ -94,32 +94,32 @@ export function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden pt-20">
       {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-nbn-light via-white to-nbn-teal/5 dark:from-nbn-dark dark:via-nbn-dark dark:to-nbn-navy/20" />
-      <div className="absolute inset-0 animate-gradient bg-gradient-to-br from-nbn-navy/5 via-transparent to-nbn-teal/10" />
+      <div className="absolute inset-0 bg-gradient-to-br from-EBN-light via-white to-EBN-teal/5 dark:from-EBN-dark dark:via-EBN-dark dark:to-EBN-navy/20" />
+      <div className="absolute inset-0 animate-gradient bg-gradient-to-br from-EBN-navy/5 via-transparent to-EBN-teal/10" />
 
       {/* Particles */}
       {[...Array(20)].map((_, i) => (
         <motion.div
           key={i}
-          className="absolute w-2 h-2 rounded-full bg-nbn-teal/20"
+          className="absolute w-2 h-2 rounded-full bg-EBN-teal/20"
           style={{ top: `${Math.random() * 100}%`, left: `${Math.random() * 100}%` }}
           animate={{ y: [0, -30, 0], opacity: [0.2, 0.6, 0.2] }}
           transition={{ duration: 3 + Math.random() * 2, repeat: Infinity, delay: Math.random() * 2 }}
         />
       ))}
 
-      <div className="container-nbn relative z-10">
+      <div className="container-EBN relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
           <div>
             <FadeIn>
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass dark:glass-dark mb-6">
-                <Sparkles className="w-4 h-4 text-nbn-teal" />
-                <span className="text-sm font-medium text-nbn-navy dark:text-white">India&apos;s #1 Business Network</span>
+                <Sparkles className="w-4 h-4 text-EBN-teal" />
+                <span className="text-sm font-medium text-nbn-navy dark:text-white">India&apos;s #1 Entrepreneur Network</span>
               </div>
             </FadeIn>
 
             <FadeIn delay={0.1}>
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-heading font-bold text-nbn-navy dark:text-white leading-[1.1] mb-6">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-heading font-bold text-EBN-navy dark:text-white leading-[1.1] mb-6">
                 Grow Your Business Through{" "}
                 <span className="gradient-text">Trusted Relationships</span>
               </h1>
@@ -135,7 +135,7 @@ export function HeroSection() {
               <div className="flex flex-wrap gap-4 mb-12">
                 <Link href="/signup">
                   <Button size="lg" className="group">
-                    Join NBN
+                    Join EBN
                     <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                   </Button>
                 </Link>

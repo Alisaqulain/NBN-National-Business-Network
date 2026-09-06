@@ -18,7 +18,7 @@ export const EVENT_TYPE_LABELS: Record<Event["type"], string> = {
 };
 
 export const EVENT_TYPE_COLORS: Record<Event["type"], string> = {
-  meeting: "bg-nbn-navy/10 text-nbn-navy",
+  meeting: "bg-EBN-navy/10 text-EBN-navy",
   networking: "bg-blue-500/10 text-blue-600",
   workshop: "bg-purple-500/10 text-purple-600",
   expo: "bg-orange-500/10 text-orange-600",
@@ -29,7 +29,7 @@ export const EVENTS: Event[] = [
   {
     _id: "ev-001",
     title: "Referral Mastery Webinar",
-    description: "Learn proven referral strategies from India's top NBN performers. Interactive Q&A with chapter presidents from Mumbai and Delhi.",
+    description: "Learn proven referral strategies from India's top EBN performers. Interactive Q&A with chapter presidents from Mumbai and Delhi.",
     type: "webinar",
     date: "2026-08-10T10:00:00+05:30",
     location: "Zoom Live",
@@ -78,7 +78,7 @@ export const EVENTS: Event[] = [
   },
   {
     _id: "ev-005",
-    title: "NBN National Business Expo",
+    title: "EBN National Business Expo",
     description: "India's largest referral-based business expo. 800+ exhibitors, 50+ industry categories, live referral exchange.",
     type: "expo",
     date: "2026-09-05T10:00:00+05:30",
@@ -131,7 +131,7 @@ export const EVENTS: Event[] = [
     description: "Quarterly meeting for chapter presidents across Western India. Strategy planning and best practice sharing.",
     type: "meeting",
     date: "2026-10-03T09:00:00+05:30",
-    location: "NBN HQ, BKC Mumbai",
+    location: "EBN HQ, BKC Mumbai",
     city: "Mumbai",
     currentAttendees: 45,
     maxAttendees: 50,

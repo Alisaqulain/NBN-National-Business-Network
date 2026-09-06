@@ -19,7 +19,7 @@ import { ContactForm } from "./contact-form";
 export const metadata: Metadata = {
   title: "Contact Us",
   description:
-    "Get in touch with National Business Network. Reach our team for membership inquiries, chapter visits, partnerships, or general support.",
+    "Get in touch with Entrepreneur Business Network. Reach our team for membership inquiries, chapter visits, partnerships, or general support.",
 };
 
 const CONTACT_INFO = [
@@ -32,14 +32,14 @@ const CONTACT_INFO = [
   {
     icon: Mail,
     title: "Email",
-    lines: ["hello@nbn.in", "support@nbn.in"],
-    href: "mailto:hello@nbn.in",
+    lines: ["hello@ebn.in", "support@ebn.in"],
+    href: "mailto:hello@ebn.in",
   },
   {
     icon: MapPin,
     title: "Head Office",
     lines: [
-      "NBN House, 42 MG Road",
+      "EBN House, 42 MG Road",
       "Bengaluru, Karnataka 560001",
       "India",
     ],
@@ -62,11 +62,11 @@ const FAQ = [
   },
   {
     q: "Do you have regional offices?",
-    a: "Yes. NBN has regional offices in Mumbai, Delhi NCR, Hyderabad, Chennai, Pune, and Ahmedabad. All regional inquiries are routed to the appropriate team automatically.",
+    a: "Yes. EBN has regional offices in Mumbai, Delhi NCR, Hyderabad, Chennai, Pune, and Ahmedabad. All regional inquiries are routed to the appropriate team automatically.",
   },
   {
     q: "How do I report a technical issue with the member portal?",
-    a: "Email support@nbn.in with your member ID and a description of the issue. Our tech team resolves most portal issues within one business day.",
+    a: "Email support@ebn.in with your member ID and a description of the issue. Our tech team resolves most portal issues within one business day.",
   },
 ] as const;
 
@@ -75,13 +75,13 @@ export default function ContactPage() {
     <>
       {/* Hero */}
       <section className="relative pt-32 pb-12 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-nbn-light via-white to-nbn-teal/5 dark:from-nbn-dark dark:via-nbn-dark dark:to-nbn-navy/20" />
-        <div className="container-nbn relative z-10">
+        <div className="absolute inset-0 bg-gradient-to-br from-EBN-light via-white to-EBN-teal/5 dark:from-EBN-dark dark:via-EBN-dark dark:to-EBN-navy/20" />
+        <div className="container-EBN relative z-10">
           <FadeIn>
-            <span className="inline-block mb-4 px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase bg-nbn-teal/10 text-nbn-teal border border-nbn-teal/20">
+            <span className="inline-block mb-4 px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase bg-EBN-teal/10 text-EBN-teal border border-EBN-teal/20">
               Contact
             </span>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-nbn-navy dark:text-white mb-6 max-w-4xl leading-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-EBN-navy dark:text-white mb-6 max-w-4xl leading-tight">
               We&apos;d Love to{" "}
               <span className="gradient-text">Hear From You</span>
             </h1>
@@ -95,7 +95,7 @@ export default function ContactPage() {
 
       {/* Contact Info + Form */}
       <section className="section-padding">
-        <div className="container-nbn">
+        <div className="container-EBN">
           <div className="grid lg:grid-cols-5 gap-10">
             <div className="lg:col-span-2 space-y-6">
               {CONTACT_INFO.map((info, i) => (
@@ -105,13 +105,13 @@ export default function ContactPage() {
                       <info.icon className="w-5 h-5 text-white" />
                     </div>
                     <div>
-                      <h3 className="font-heading font-bold text-nbn-navy dark:text-white mb-1">
+                      <h3 className="font-heading font-bold text-EBN-navy dark:text-white mb-1">
                         {info.title}
                       </h3>
                       {info.lines.map((line) => (
                         <p key={line} className="text-sm text-muted">
                           {"href" in info ? (
-                            <a href={info.href} className="hover:text-nbn-teal transition-colors">
+                            <a href={info.href} className="hover:text-EBN-teal transition-colors">
                               {line}
                             </a>
                           ) : (
@@ -135,15 +135,15 @@ export default function ContactPage() {
       </section>
 
       {/* Map Placeholder */}
-      <section className="section-padding bg-nbn-light dark:bg-nbn-dark/50 pt-0">
-        <div className="container-nbn">
+      <section className="section-padding bg-EBN-light dark:bg-EBN-dark/50 pt-0">
+        <div className="container-EBN">
           <FadeIn>
             <div className="relative rounded-2xl overflow-hidden h-80 md:h-96 glass dark:glass-dark">
-              <div className="absolute inset-0 bg-gradient-to-br from-nbn-navy/10 to-nbn-teal/10 flex items-center justify-center">
+              <div className="absolute inset-0 bg-gradient-to-br from-EBN-navy/10 to-EBN-teal/10 flex items-center justify-center">
                 <div className="text-center p-8">
-                  <MapPin className="w-12 h-12 text-nbn-teal mx-auto mb-4" />
-                  <h3 className="text-xl font-heading font-bold text-nbn-navy dark:text-white mb-2">
-                    NBN House, Bengaluru
+                  <MapPin className="w-12 h-12 text-EBN-teal mx-auto mb-4" />
+                  <h3 className="text-xl font-heading font-bold text-EBN-navy dark:text-white mb-2">
+                    EBN House, Bengaluru
                   </h3>
                   <p className="text-muted text-sm max-w-md">
                     42 MG Road, Bengaluru, Karnataka 560001 — Visit us by appointment
@@ -170,7 +170,7 @@ export default function ContactPage() {
 
       {/* FAQ */}
       <section className="section-padding">
-        <div className="container-nbn max-w-3xl">
+        <div className="container-EBN max-w-3xl">
           <SectionHeading
             badge="FAQ"
             title="Contact & Support FAQ"
@@ -194,7 +194,7 @@ export default function ContactPage() {
       {/* CTA */}
       <section className="section-padding relative overflow-hidden">
         <div className="absolute inset-0 gradient-bg" />
-        <div className="container-nbn relative z-10 text-center">
+        <div className="container-EBN relative z-10 text-center">
           <FadeIn>
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-white mb-4">
               Prefer to Explore on Your Own?
@@ -205,7 +205,7 @@ export default function ContactPage() {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link href="/membership">
-                <Button size="lg" variant="secondary" className="bg-white text-nbn-navy hover:bg-white/90">
+                <Button size="lg" variant="secondary" className="bg-white text-EBN-navy hover:bg-white/90">
                   View Plans
                   <ArrowRight className="w-4 h-4" />
                 </Button>

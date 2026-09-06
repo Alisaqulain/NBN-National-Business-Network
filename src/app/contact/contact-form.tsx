@@ -53,7 +53,7 @@ export function ContactForm() {
 
   return (
     <GlassCard hover={false}>
-      <h2 className="text-2xl font-heading font-bold text-nbn-navy dark:text-white mb-6">
+      <h2 className="text-2xl font-heading font-bold text-EBN-navy dark:text-white mb-6">
         Send Us a Message
       </h2>
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-5" noValidate>

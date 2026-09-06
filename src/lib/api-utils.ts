@@ -17,7 +17,7 @@ export function generateOTP() {
 
 export function generateInvoiceNumber() {
   const date = new Date();
-  const prefix = `NBN${date.getFullYear()}${String(date.getMonth() + 1).padStart(2, "0")}`;
+  const prefix = `EBN${date.getFullYear()}${String(date.getMonth() + 1).padStart(2, "0")}`;
   return `${prefix}-${crypto.randomInt(10000, 99999)}`;
 }
 
@@ -66,10 +66,10 @@ export async function sendEmail(to: string, subject: string, html: string) {
 export async function sendOTPEmail(to: string, otp: string) {
   await sendEmail(
     to,
-    "NBN – Verification Code",
+    "EBN – Verification Code",
     `<div style="font-family:Inter,sans-serif;max-width:480px;margin:0 auto;padding:32px;background:#F7F8FA;border-radius:16px;">
       <h2 style="color:#143055;font-family:Poppins,sans-serif;">Verify Your Email</h2>
-      <p style="color:#64748b;">Your NBN verification code is:</p>
+      <p style="color:#64748b;">Your EBN verification code is:</p>
       <p style="font-size:32px;font-weight:bold;color:#16999A;letter-spacing:8px;">${otp}</p>
       <p style="color:#64748b;font-size:14px;">This code expires in 10 minutes.</p>
     </div>`
@@ -79,7 +79,7 @@ export async function sendOTPEmail(to: string, otp: string) {
 export async function sendWelcomeEmail(to: string, name: string) {
   await sendEmail(
     to,
-    "Welcome to National Business Network!",
+    "Welcome to Entrepreneur Business Network!",
     `<div style="font-family:Inter,sans-serif;max-width:480px;margin:0 auto;padding:32px;">
       <h2 style="color:#143055;font-family:Poppins,sans-serif;">Welcome, ${name}!</h2>
       <p style="color:#64748b;">Your journey to quality business referrals starts now.</p>
@@ -95,7 +95,7 @@ export async function sendContactNotification(data: {
 }) {
   await sendEmail(
     config.email.from,
-    `NBN Contact: ${data.subject}`,
+    `EBN Contact: ${data.subject}`,
     `<p><strong>From:</strong> ${data.name} (${data.email})</p><p>${data.message}</p>`
   );
 }

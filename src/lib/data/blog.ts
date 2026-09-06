@@ -16,7 +16,7 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: "referral-strategies-indian-smes",
     excerpt: "Discover proven referral techniques adapted for India's diverse business landscape, from family-run shops to tech startups.",
     content: `
-Referrals remain the most cost-effective growth channel for Indian SMEs. Yet many entrepreneurs struggle to build a systematic referral engine. Here are five strategies that NBN members use consistently to generate qualified leads.
+Referrals remain the most cost-effective growth channel for Indian SMEs. Yet many entrepreneurs struggle to build a systematic referral engine. Here are five strategies that EBN members use consistently to generate qualified leads.
 
 ## 1. Be Specific About Your Ideal Client
 
@@ -24,7 +24,7 @@ Vague asks like "send me anyone who needs my service" rarely work. Instead, desc
 
 ## 2. Give Before You Ask
 
-The NBN philosophy of "Givers Gain" isn't just a slogan. Members who consistently give quality referrals receive 3x more referrals in return. Track your giving ratio monthly — aim for at least 5 quality referrals per month.
+The EBN philosophy of "Givers Gain" isn't just a slogan. Members who consistently give quality referrals receive 3x more referrals in return. Track your giving ratio monthly — aim for at least 5 quality referrals per month.
 
 ## 3. Follow Up Within 24 Hours
 
@@ -39,11 +39,11 @@ Speed matters in India’s competitive market. When you receive a referral, ackn
 - **R**eward with thank-you notes and reciprocal referrals
 - **R**epeat consistently every week
 - **A**sk for introductions, not just names
-- **L**everage digital tools (NBN app, WhatsApp groups)
+- **L**everage digital tools (EBN app, WhatsApp groups)
 
 ## 5. Attend Cross-Chapter Events
 
-Your chapter is your home base, but national events like the NBN Business Expo expose you to members across 100+ cities. Many of our highest-value referrals come from connections made at regional summits.
+Your chapter is your home base, but national events like the EBN Business Expo expose you to members across 100+ cities. Many of our highest-value referrals come from connections made at regional summits.
 
 Start implementing one strategy this week. Small, consistent actions compound into transformational business growth.
     `.trim(),
@@ -56,11 +56,11 @@ Start implementing one strategy this week. Small, consistent actions compound in
   },
   {
     _id: "blog-002",
-    title: "How Bangalore Tech Founders Are Scaling Through NBN",
-    slug: "bangalore-tech-founders-scaling-nbn",
-    excerpt: "Inside the NBN Bangalore Tech chapter — where SaaS founders, dev agencies, and IT consultants generate ₹50Cr+ in annual referrals.",
+    title: "How Bangalore Tech Founders Are Scaling Through EBN",
+    slug: "bangalore-tech-founders-scaling-EBN",
+    excerpt: "Inside the EBN Bangalore Tech chapter — where SaaS founders, dev agencies, and IT consultants generate ₹50Cr+ in annual referrals.",
     content: `
-Bangalore's startup ecosystem is fiercely competitive. Standing out requires more than a great product — it requires trusted relationships. The NBN Bangalore Tech chapter has become a hub for technology entrepreneurs who want structured, accountable networking.
+Bangalore's startup ecosystem is fiercely competitive. Standing out requires more than a great product — it requires trusted relationships. The EBN Bangalore Tech chapter has become a hub for technology entrepreneurs who want structured, accountable networking.
 
 ## The Chapter Profile
 
@@ -79,7 +79,7 @@ In 2025 alone, Bangalore Tech members reported:
 
 ## Tips from Chapter President
 
-"Don't treat NBN as a lead generation tool. Treat it as a relationship-building commitment. The leads follow naturally when trust is established," says Priya Sharma, chapter president and founder of TechVision Solutions.
+"Don't treat EBN as a lead generation tool. Treat it as a relationship-building commitment. The leads follow naturally when trust is established," says Priya Sharma, chapter president and founder of TechVision Solutions.
 
 Whether you're bootstrapped or funded, the Bangalore Tech chapter offers a proven framework for B2B growth in India's Silicon Valley.
     `.trim(),
@@ -94,9 +94,9 @@ Whether you're bootstrapped or funded, the Bangalore Tech chapter offers a prove
     _id: "blog-003",
     title: "GST Changes 2026: What Every Business Owner Must Know",
     slug: "gst-changes-2026-business-guide",
-    excerpt: "A practical breakdown of the latest GST amendments affecting SMEs, with compliance checklists for NBN members.",
+    excerpt: "A practical breakdown of the latest GST amendments affecting SMEs, with compliance checklists for EBN members.",
     content: `
-The GST Council's 2026 updates bring significant changes for Indian businesses. Here's what NBN members need to know to stay compliant and avoid penalties.
+The GST Council's 2026 updates bring significant changes for Indian businesses. Here's what EBN members need to know to stay compliant and avoid penalties.
 
 ## Key Changes
 
@@ -112,9 +112,9 @@ The GST Council's 2026 updates bring significant changes for Indian businesses. 
 - Consider quarterly filing if eligible — reduces compliance burden
 - Schedule a GST health check with your CA before September 2026
 
-## NBN Resources
+## EBN Resources
 
-Download our free GST Invoice Template Pack from the Resources section. NBN members also get exclusive access to our GST Compliance Masterclass webinar on September 18.
+Download our free GST Invoice Template Pack from the Resources section. EBN members also get exclusive access to our GST Compliance Masterclass webinar on September 18.
 
 Staying compliant protects your business reputation — and makes you a more trustworthy referral partner.
     `.trim(),
@@ -129,13 +129,13 @@ Staying compliant protects your business reputation — and makes you a more tru
     _id: "blog-004",
     title: "From Chapter Member to Regional Director: A Leadership Journey",
     slug: "chapter-member-to-regional-director",
-    excerpt: "Rajesh Mehta shares how NBN leadership roles accelerated both his construction business and personal growth.",
+    excerpt: "Rajesh Mehta shares how EBN leadership roles accelerated both his construction business and personal growth.",
     content: `
-Leadership in NBN isn't just about titles — it's about service, accountability, and leading by example. Rajesh Mehta's journey from Mumbai Central chapter member to Western India Regional Director offers lessons for every entrepreneur.
+Leadership in EBN isn't just about titles — it's about service, accountability, and leading by example. Rajesh Mehta's journey from Mumbai Central chapter member to Western India Regional Director offers lessons for every entrepreneur.
 
 ## Starting Point
 
-When Rajesh joined NBN in 2022, Mehta Constructions was doing ₹1.2 crore annually. He joined primarily for referrals but quickly discovered the leadership development track.
+When Rajesh joined EBN in 2022, Mehta Constructions was doing ₹1.2 crore annually. He joined primarily for referrals but quickly discovered the leadership development track.
 
 ## The Leadership Path
 
@@ -146,13 +146,13 @@ When Rajesh joined NBN in 2022, Mehta Constructions was doing ₹1.2 crore annua
 
 ## Business Impact
 
-Revenue grew from ₹1.2Cr to ₹3.6Cr during this period. Rajesh attributes 60% of new business directly to NBN referrals and cross-chapter connections.
+Revenue grew from ₹1.2Cr to ₹3.6Cr during this period. Rajesh attributes 60% of new business directly to EBN referrals and cross-chapter connections.
 
 ## Advice for Aspiring Leaders
 
 "Leadership roles force you to think beyond your own business. You learn delegation, conflict resolution, and strategic planning — skills that directly translate to running a larger company."
 
-NBN offers leadership pathways at chapter, regional, and national levels. Talk to your chapter president about available roles.
+EBN offers leadership pathways at chapter, regional, and national levels. Talk to your chapter president about available roles.
     `.trim(),
     category: "Leadership",
     author: { name: "Rajesh Mehta", avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face" },
@@ -163,11 +163,11 @@ NBN offers leadership pathways at chapter, regional, and national levels. Talk t
   },
   {
     _id: "blog-005",
-    title: "Digital Marketing on a Budget: A Guide for NBN Members",
+    title: "Digital Marketing on a Budget: A Guide for EBN Members",
     slug: "digital-marketing-budget-guide",
     excerpt: "Practical digital marketing tactics for Indian SMEs spending less than ₹20,000 per month on marketing.",
     content: `
-You don't need a massive marketing budget to build visibility. NBN members across India are winning clients through smart, low-cost digital strategies.
+You don't need a massive marketing budget to build visibility. EBN members across India are winning clients through smart, low-cost digital strategies.
 
 ## LinkedIn: Your B2B Powerhouse
 
@@ -191,7 +191,7 @@ Our Social Media Content Calendar (free in Resources) provides 30 days of post i
 
 Track referral source, not vanity metrics. If LinkedIn brings 2 clients per month at zero ad spend, that's better than 10,000 impressions with no conversions.
 
-Digital marketing amplifies your NBN networking — it doesn't replace face-to-face trust building.
+Digital marketing amplifies your EBN networking — it doesn't replace face-to-face trust building.
     `.trim(),
     category: "Business Growth",
     author: { name: "Kavita Desai", avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100&h=100&fit=crop&crop=face" },
@@ -204,9 +204,9 @@ Digital marketing amplifies your NBN networking — it doesn't replace face-to-f
     _id: "blog-006",
     title: "Why Weekly Meetings Beat Monthly Networking Events",
     slug: "weekly-meetings-vs-monthly-networking",
-    excerpt: "The science behind NBN's weekly meeting model and why consistency builds stronger referral relationships.",
+    excerpt: "The science behind EBN's weekly meeting model and why consistency builds stronger referral relationships.",
     content: `
-Most networking groups meet monthly. NBN chapters meet weekly. This isn't arbitrary — it's strategic.
+Most networking groups meet monthly. EBN chapters meet weekly. This isn't arbitrary — it's strategic.
 
 ## The Trust Equation
 
@@ -220,9 +220,9 @@ Weekly check-ins create natural accountability. Members report referrals given a
 
 Consider two entrepreneurs:
 - **Monthly networker**: 12 touchpoints per year
-- **NBN member**: 48+ touchpoints per year
+- **EBN member**: 48+ touchpoints per year
 
-The NBN member has 4x the relationship depth, leading to higher quality referrals and faster deal closure.
+The EBN member has 4x the relationship depth, leading to higher quality referrals and faster deal closure.
 
 ## Making Weekly Meetings Work
 
@@ -231,7 +231,7 @@ The NBN member has 4x the relationship depth, leading to higher quality referral
 - Arrive 15 minutes early for informal networking
 - Follow up on referrals within 24 hours
 
-Consistency is the secret weapon of NBN's highest-performing members.
+Consistency is the secret weapon of EBN's highest-performing members.
     `.trim(),
     category: "Networking",
     author: { name: "Dr. Anil Kapoor", avatar: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=100&h=100&fit=crop&crop=face" },

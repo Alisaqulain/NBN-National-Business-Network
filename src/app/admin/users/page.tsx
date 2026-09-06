@@ -34,7 +34,7 @@ const MOCK_USERS: AdminUser[] = [
   { id: "2", name: "Rajesh Kumar", email: "rajesh@buildcorp.in", role: "moderator", status: "active", chapter: "Delhi NCR", joinedAt: "2023-11-20" },
   { id: "3", name: "Anita Sharma", email: "anita@designstudio.in", role: "member", status: "active", chapter: "Bangalore", joinedAt: "2025-01-08" },
   { id: "4", name: "Vikram Singh", email: "vikram@finserve.in", role: "member", status: "pending", chapter: "Pune", joinedAt: "2026-07-10" },
-  { id: "5", name: "Admin User", email: "admin@nbn.in", role: "admin", status: "active", chapter: "HQ", joinedAt: "2022-01-01" },
+  { id: "5", name: "Admin User", email: "admin@ebn.in", role: "admin", status: "active", chapter: "HQ", joinedAt: "2022-01-01" },
   { id: "6", name: "Sneha Reddy", email: "sneha@healthcare.in", role: "member", status: "inactive", chapter: "Hyderabad", joinedAt: "2024-08-22" },
 ];
 
@@ -82,7 +82,7 @@ export default function AdminUsersPage() {
       <FadeIn>
         <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <div>
-            <h1 className="font-heading text-2xl font-bold text-nbn-navy lg:text-3xl">Users</h1>
+            <h1 className="font-heading text-2xl font-bold text-EBN-navy lg:text-3xl">Users</h1>
             <p className="mt-1 text-muted-foreground">Manage platform members and roles</p>
           </div>
           <Button>

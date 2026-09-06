@@ -56,11 +56,11 @@ export function ResourcesView() {
 
   return (
     <div className="pt-28 pb-20">
-      <div className="container-nbn">
+      <div className="container-EBN">
         <SectionHeading
           badge="Resources"
           title="Business Resources & Downloads"
-          subtitle="Free templates, guides, PDFs, and video courses to help NBN members and entrepreneurs grow their businesses."
+          subtitle="Free templates, guides, PDFs, and video courses to help EBN members and entrepreneurs grow their businesses."
         />
 
         {/* Search & Filters */}
@@ -90,7 +90,7 @@ export function ResourcesView() {
                   id="resource-category"
                   value={category}
                   onChange={(e) => setCategory(e.target.value)}
-                  className="flex h-11 w-full rounded-xl border border-nbn-navy/10 bg-white/80 px-4 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-nbn-teal"
+                  className="flex h-11 w-full rounded-xl border border-EBN-navy/10 bg-white/80 px-4 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-EBN-teal"
                 >
                   {RESOURCE_CATEGORIES.map((cat) => (
                     <option key={cat} value={cat}>
@@ -138,11 +138,11 @@ export function ResourcesView() {
 
         <FadeIn className="mt-12">
           <GlassCard hover={false} className="text-center">
-            <h3 className="text-xl font-heading font-bold text-nbn-navy dark:text-white mb-2">
-              NBN Members Get Premium Access
+            <h3 className="text-xl font-heading font-bold text-EBN-navy dark:text-white mb-2">
+              EBN Members Get Premium Access
             </h3>
             <p className="text-muted mb-4 max-w-xl mx-auto">
-              Join NBN to unlock exclusive resources, video courses, and chapter-specific templates
+              Join EBN to unlock exclusive resources, video courses, and chapter-specific templates
               not available to the public.
             </p>
             <Button variant="secondary">Explore Membership</Button>
@@ -166,11 +166,11 @@ function ResourceCard({ resource, index }: { resource: Resource; index: number }
             >
               <Icon className="w-6 h-6" />
             </div>
-            <span className="px-2.5 py-1 rounded-full text-xs font-medium bg-nbn-navy/5 text-nbn-navy">
+            <span className="px-2.5 py-1 rounded-full text-xs font-medium bg-EBN-navy/5 text-EBN-navy">
               {resource.category}
             </span>
           </div>
-          <CardTitle className="mt-4 group-hover:text-nbn-teal transition-colors">
+          <CardTitle className="mt-4 group-hover:text-EBN-teal transition-colors">
             {resource.title}
           </CardTitle>
         </CardHeader>

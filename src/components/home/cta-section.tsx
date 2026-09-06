@@ -11,7 +11,7 @@ export function CTASection() {
       <div className="absolute inset-0 gradient-bg" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.1),transparent_50%)]" />
 
-      <div className="container-nbn relative z-10 text-center">
+      <div className="container-EBN relative z-10 text-center">
         <FadeIn>
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm mb-6">
             <Sparkles className="w-4 h-4 text-white" />
@@ -21,12 +21,12 @@ export function CTASection() {
             Ready to Transform Your Business Network?
           </h2>
           <p className="text-lg text-white/70 mb-10 max-w-2xl mx-auto">
-            Join 20,000+ entrepreneurs who are already generating quality referrals and building lasting business relationships through NBN.
+            Join 20,000+ entrepreneurs who are already generating quality referrals and building lasting business relationships through EBN.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/signup">
-              <Button size="lg" variant="secondary" className="group bg-white text-nbn-navy hover:bg-white/90">
-                Join NBN Today
+              <Button size="lg" variant="secondary" className="group bg-white text-EBN-navy hover:bg-white/90">
+                Join EBN Today
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Button>
             </Link>
