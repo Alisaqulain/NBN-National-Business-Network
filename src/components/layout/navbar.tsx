@@ -5,11 +5,10 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import {
-  Search, Globe, Moon, Sun, Menu, X, ChevronDown,
+  Search, Globe, Menu, X, ChevronDown,
   Handshake, Calendar, GraduationCap, Award, ShieldCheck,
-  BookOpen, Users, Building2, Newspaper,
+  BookOpen, Users, Building2,
 } from "lucide-react";
-import { useTheme } from "next-themes";
 import { Button } from "@/components/ui/button";
 import { BRAND, NAV_LINKS } from "@/lib/constants";
 import { cn } from "@/lib/utils";
@@ -53,13 +52,10 @@ export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [megaOpen, setMegaOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
-  const { theme, setTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
   const { scrollY } = useScroll();
   const navOpacity = useTransform(scrollY, [0, 80], [0, 1]);
 
   useEffect(() => {
-    setMounted(true);
     const handleScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -71,8 +67,8 @@ export function Navbar() {
         className={cn(
           "fixed top-0 left-0 right-0 z-50 transition-all duration-500",
           scrolled
-            ? "bg-white/90 dark:bg-EBN-dark/90 backdrop-blur-xl shadow-lg shadow-EBN-navy/5 border-b border-EBN-navy/5"
-            : "bg-transparent"
+            ? "border-b border-slate-200/80 bg-white/95 shadow-[0_4px_24px_rgba(20,48,85,0.06)] backdrop-blur-xl"
+            : "bg-white/40 backdrop-blur-md"
         )}
       >
         <motion.div
@@ -143,19 +139,10 @@ export function Navbar() {
               <button onClick={() => setSearchOpen(!searchOpen)} className="p-2 rounded-xl hover:bg-EBN-navy/5 dark:hover:bg-white/10 transition-colors" aria-label="Search">
                 <Search className="w-5 h-5 text-EBN-navy dark:text-white" />
               </button>
-              <button className="hidden md:flex p-2 rounded-xl hover:bg-EBN-navy/5 dark:hover:bg-white/10 transition-colors items-center gap-1" aria-label="Language">
-                <Globe className="w-5 h-5 text-EBN-navy dark:text-white" />
-                <span className="text-xs font-medium text-EBN-navy dark:text-white">EN</span>
+              <button className="hidden md:flex p-2 rounded-xl hover:bg-EBN-navy/5 transition-colors items-center gap-1" aria-label="Language">
+                <Globe className="w-5 h-5 text-EBN-navy" />
+                <span className="text-xs font-medium text-EBN-navy">EN</span>
               </button>
-              {mounted && (
-                <button
-                  onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-                  className="p-2 rounded-xl hover:bg-EBN-navy/5 dark:hover:bg-white/10 transition-colors"
-                  aria-label="Toggle theme"
-                >
-                  {theme === "dark" ? <Sun className="w-5 h-5 text-white" /> : <Moon className="w-5 h-5 text-EBN-navy" />}
-                </button>
-              )}
               <Link href="/login" className="hidden md:block">
                 <Button variant="ghost" size="sm">Login</Button>
               </Link>

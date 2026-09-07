@@ -10,7 +10,7 @@ const icons = { Handshake, Calendar, GraduationCap, Award, Globe, ShieldCheck };
 
 export function WhyChooseSection() {
   return (
-    <section className="section-padding bg-EBN-light dark:bg-EBN-dark/50 relative overflow-hidden">
+    <section className="section-padding premium-section-alt relative overflow-hidden">
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-EBN-teal/5 rounded-full blur-3xl" />
       <div className="container-EBN relative">
         <SectionHeading

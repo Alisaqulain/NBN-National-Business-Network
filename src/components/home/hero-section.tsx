@@ -60,7 +60,7 @@ function HeroIllustration() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: [0, -10, 0] }}
           transition={{ opacity: { delay: card.delay + 0.5 }, y: { duration: 4, repeat: Infinity, delay: card.delay } }}
-          className="absolute glass dark:glass-dark rounded-xl px-4 py-3 shadow-xl"
+          className="absolute glass rounded-xl px-4 py-3 shadow-xl"
           style={{ top: card.top, left: card.left, right: card.right, bottom: card.bottom }}
         >
           <p className="text-xs text-muted">{card.label}</p>
@@ -94,8 +94,8 @@ export function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden pt-20">
       {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-EBN-light via-white to-EBN-teal/5 dark:from-EBN-dark dark:via-EBN-dark dark:to-EBN-navy/20" />
-      <div className="absolute inset-0 animate-gradient bg-gradient-to-br from-EBN-navy/5 via-transparent to-EBN-teal/10" />
+      <div className="absolute inset-0 bg-gradient-to-br from-white via-EBN-light/30 to-EBN-teal/5" />
+      <div className="absolute inset-0 animate-gradient bg-gradient-to-br from-EBN-navy/[0.03] via-transparent to-EBN-teal/[0.06]" />
 
       {/* Particles */}
       {[...Array(20)].map((_, i) => (

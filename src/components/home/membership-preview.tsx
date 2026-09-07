@@ -13,7 +13,7 @@ export function MembershipPreview() {
   const [yearly, setYearly] = useState(false);
 
   return (
-    <section className="section-padding relative">
+    <section className="section-padding premium-section relative">
       <div className="container-EBN">
         <SectionHeading
           badge="Membership"

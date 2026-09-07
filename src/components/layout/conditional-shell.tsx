@@ -26,7 +26,7 @@ export function ConditionalShell({ children }: { children: React.ReactNode }) {
   return (
     <>
       <Navbar />
-      <main className="flex-1">{children}</main>
+      <main className="flex-1 bg-transparent">{children}</main>
       <Footer />
     </>
   );
@@ -34,7 +34,7 @@ export function ConditionalShell({ children }: { children: React.ReactNode }) {
 
 export function AuthShell({ children }: { children: React.ReactNode }) {
   return (
-    <div className="relative min-h-screen overflow-hidden bg-gradient-to-br from-EBN-light via-white to-EBN-teal/5">
+    <div className="relative min-h-screen overflow-hidden bg-gradient-to-br from-white via-EBN-light/40 to-white">
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
         <div className="absolute -left-32 -top-32 h-96 w-96 rounded-full bg-EBN-navy/10 blur-3xl animate-float" />
         <div className="absolute -bottom-32 -right-32 h-96 w-96 rounded-full bg-EBN-teal/15 blur-3xl animate-float" style={{ animationDelay: "3s" }} />

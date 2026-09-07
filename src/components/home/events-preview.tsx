@@ -50,7 +50,7 @@ const typeColors: Record<string, string> = {
 
 export function EventsPreview() {
   return (
-    <section className="section-padding">
+    <section className="section-padding premium-section relative">
       <div className="container-EBN">
         <SectionHeading
           badge="Events"

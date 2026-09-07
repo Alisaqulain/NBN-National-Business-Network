@@ -41,7 +41,7 @@ const TESTIMONIALS = [
 
 export function TestimonialsSection() {
   return (
-    <section className="section-padding bg-EBN-light dark:bg-EBN-dark/50">
+    <section className="section-padding premium-section-alt">
       <div className="container-EBN">
         <SectionHeading
           badge="Success Stories"

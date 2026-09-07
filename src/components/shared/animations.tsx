@@ -78,7 +78,7 @@ export function GlassCard({
     <motion.div
       whileHover={hover ? { y: -8, scale: 1.02 } : undefined}
       transition={{ type: "spring", stiffness: 300, damping: 20 }}
-      className={`rounded-2xl border border-white/20 bg-white/70 backdrop-blur-xl p-6 shadow-lg shadow-EBN-navy/5 dark:bg-white/5 dark:border-white/10 ${className ?? ""}`}
+      className={`rounded-2xl border border-slate-200/70 bg-white/90 backdrop-blur-xl p-6 shadow-[0_8px_40px_rgba(20,48,85,0.06)] ${className ?? ""}`}
     >
       {children}
     </motion.div>

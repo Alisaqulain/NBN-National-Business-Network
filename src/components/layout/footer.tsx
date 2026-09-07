@@ -42,37 +42,37 @@ const SOCIAL = [
 
 export function Footer() {
   return (
-    <footer className="bg-EBN-dark text-white relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-EBN-navy/50 to-EBN-teal/20 pointer-events-none" />
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-EBN-teal/10 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-EBN-navy/20 rounded-full blur-3xl pointer-events-none" />
+    <footer className="relative overflow-hidden border-t border-slate-200/80 bg-white/90 backdrop-blur-xl">
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-EBN-light/50 via-white to-EBN-light/30" />
+      <div className="pointer-events-none absolute -top-24 left-1/4 h-72 w-72 rounded-full bg-EBN-teal/5 blur-3xl" />
+      <div className="pointer-events-none absolute -bottom-24 right-1/4 h-72 w-72 rounded-full bg-EBN-navy/5 blur-3xl" />
 
       <div className="container-EBN relative pt-20 pb-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12 mb-16">
+        <div className="mb-16 grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-6">
           <div className="lg:col-span-2">
-            <Link href="/" className="inline-block mb-6">
+            <Link href="/" className="mb-6 inline-block">
               <Image
                 src={BRAND.logo}
                 alt={`${BRAND.shortName} – ${BRAND.name}`}
                 width={180}
                 height={52}
-                className="h-12 w-auto brightness-0 invert"
+                className="h-12 w-auto"
               />
             </Link>
-            <p className="text-white/60 mb-6 leading-relaxed max-w-sm">
+            <p className="mb-6 max-w-sm leading-relaxed text-muted">
               India&apos;s premier entrepreneur networking platform connecting business owners through trusted relationships and quality referrals.
             </p>
-            <div className="space-y-3 text-sm text-white/60">
+            <div className="space-y-3 text-sm text-muted">
               <div className="flex items-center gap-3">
-                <MapPin className="w-4 h-4 text-EBN-teal shrink-0" />
+                <MapPin className="h-4 w-4 shrink-0 text-EBN-teal" />
                 <span>123 Business Park, Bandra Kurla Complex, Mumbai 400051</span>
               </div>
               <div className="flex items-center gap-3">
-                <Phone className="w-4 h-4 text-EBN-teal shrink-0" />
+                <Phone className="h-4 w-4 shrink-0 text-EBN-teal" />
                 <span>+91 1800-EBN-NETWORK</span>
               </div>
               <div className="flex items-center gap-3">
-                <Mail className="w-4 h-4 text-EBN-teal shrink-0" />
+                <Mail className="h-4 w-4 shrink-0 text-EBN-teal" />
                 <span>hello@ebn.in</span>
               </div>
             </div>
@@ -80,11 +80,11 @@ export function Footer() {
 
           {Object.entries(FOOTER_LINKS).map(([title, links]) => (
             <div key={title}>
-              <h4 className="font-heading font-semibold text-white mb-4">{title}</h4>
+              <h4 className="mb-4 font-heading font-semibold text-EBN-navy">{title}</h4>
               <ul className="space-y-3">
                 {links.map((link) => (
                   <li key={link.href}>
-                    <Link href={link.href} className="text-sm text-white/60 hover:text-EBN-teal transition-colors">
+                    <Link href={link.href} className="text-sm text-muted transition-colors hover:text-EBN-teal">
                       {link.label}
                     </Link>
                   </li>
@@ -94,25 +94,25 @@ export function Footer() {
           ))}
         </div>
 
-        <div className="border-t border-white/10 pt-10 pb-8">
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
+        <div className="border-t border-slate-200/80 py-10">
+          <div className="flex flex-col items-center justify-between gap-6 lg:flex-row">
             <div>
-              <h4 className="font-heading font-semibold mb-2">Stay Updated</h4>
-              <p className="text-sm text-white/60 mb-4">Get networking tips and event updates in your inbox.</p>
+              <h4 className="mb-2 font-heading font-semibold text-EBN-navy">Stay Updated</h4>
+              <p className="mb-4 text-sm text-muted">Get networking tips and event updates in your inbox.</p>
             </div>
-            <div className="flex w-full lg:w-auto gap-3">
+            <div className="flex w-full gap-3 lg:w-auto">
               <Input
                 type="email"
                 placeholder="Enter your email"
-                className="bg-white/10 border-white/10 text-white placeholder:text-white/40 min-w-[280px]"
+                className="min-w-[280px] border-slate-200/80 bg-white shadow-sm"
               />
               <Button>Subscribe</Button>
             </div>
           </div>
         </div>
 
-        <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-sm text-white/40">
+        <div className="flex flex-col items-center justify-between gap-4 border-t border-slate-200/80 pt-8 md:flex-row">
+          <p className="text-sm text-muted">
             © {new Date().getFullYear()} Entrepreneur Business Network. All rights reserved.
           </p>
           <div className="flex items-center gap-4">
@@ -121,9 +121,9 @@ export function Footer() {
                 key={label}
                 href={href}
                 aria-label={label}
-                className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center hover:bg-EBN-teal/20 hover:text-EBN-teal transition-all"
+                className="flex h-10 w-10 items-center justify-center rounded-xl border border-slate-200/80 bg-white text-EBN-navy shadow-sm transition-all hover:border-EBN-teal/30 hover:bg-EBN-teal/5 hover:text-EBN-teal"
               >
-                <Icon className="w-4 h-4" />
+                <Icon className="h-4 w-4" />
               </a>
             ))}
           </div>

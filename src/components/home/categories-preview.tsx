@@ -15,7 +15,7 @@ const categoryIcons: Record<string, string> = {
 
 export function CategoriesPreview() {
   return (
-    <section className="section-padding bg-EBN-light dark:bg-EBN-dark/50">
+    <section className="section-padding premium-section">
       <div className="container-EBN">
         <SectionHeading
           badge="Categories"
