@@ -2,6 +2,7 @@
 
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { useEffect, useRef } from "react";
+import { cn } from "@/lib/utils";
 
 export function AnimatedCounter({
   value,
@@ -76,9 +77,13 @@ export function GlassCard({
 }) {
   return (
     <motion.div
-      whileHover={hover ? { y: -8, scale: 1.02 } : undefined}
+      whileHover={hover ? { y: -4, scale: 1.01 } : undefined}
       transition={{ type: "spring", stiffness: 300, damping: 20 }}
-      className={`rounded-2xl border border-slate-200/70 bg-white/90 backdrop-blur-xl p-6 shadow-[0_8px_40px_rgba(20,48,85,0.06)] ${className ?? ""}`}
+      className={cn(
+        "rounded-2xl border border-slate-200/70 bg-white/90 p-5 shadow-[0_8px_40px_rgba(20,48,85,0.06)] backdrop-blur-xl sm:p-6",
+        "dark:border-slate-700/50 dark:bg-slate-900/80 dark:shadow-[0_8px_40px_rgba(0,0,0,0.35)]",
+        className
+      )}
     >
       {children}
     </motion.div>
@@ -97,20 +102,26 @@ export function SectionHeading({
   centered?: boolean;
 }) {
   return (
-    <FadeIn className={centered ? "text-center mb-16" : "mb-16"}>
+    <motion.div
+      initial={{ opacity: 0, y: 24 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-50px" }}
+      transition={{ duration: 0.6, ease: [0.21, 0.47, 0.32, 0.98] }}
+      className={cn(centered ? "mb-10 text-center sm:mb-16" : "mb-10 sm:mb-16")}
+    >
       {badge && (
-        <span className="inline-block mb-4 px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase bg-EBN-teal/10 text-EBN-teal border border-EBN-teal/20">
+        <span className="mb-4 inline-block rounded-full border border-EBN-teal/20 bg-EBN-teal/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-EBN-teal dark:border-EBN-teal/30 dark:bg-EBN-teal/15">
           {badge}
         </span>
       )}
-      <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-EBN-navy dark:text-white mb-4">
+      <h2 className="mb-3 font-heading text-2xl font-bold text-EBN-navy dark:text-slate-100 sm:mb-4 sm:text-3xl md:text-4xl lg:text-5xl">
         {title}
       </h2>
       {subtitle && (
-        <p className="text-lg text-muted max-w-2xl mx-auto leading-relaxed">
+        <p className="mx-auto max-w-2xl text-base leading-relaxed text-muted sm:text-lg">
           {subtitle}
         </p>
       )}
-    </FadeIn>
+    </motion.div>
   );
 }

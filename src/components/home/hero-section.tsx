@@ -92,10 +92,10 @@ function HeroIllustration() {
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden pt-20">
+    <section className="relative flex min-h-[85vh] items-center overflow-hidden pt-16 sm:min-h-screen sm:pt-20">
       {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-white via-EBN-light/30 to-EBN-teal/5" />
-      <div className="absolute inset-0 animate-gradient bg-gradient-to-br from-EBN-navy/[0.03] via-transparent to-EBN-teal/[0.06]" />
+      <div className="absolute inset-0 bg-gradient-to-br from-white via-EBN-light/30 to-EBN-teal/5 dark:from-slate-950 dark:via-slate-900 dark:to-EBN-navy/20" />
+      <div className="absolute inset-0 animate-gradient bg-gradient-to-br from-EBN-navy/[0.03] via-transparent to-EBN-teal/[0.06] dark:from-EBN-teal/[0.05] dark:to-transparent" />
 
       {/* Particles */}
       {[...Array(20)].map((_, i) => (
@@ -114,12 +114,12 @@ export function HeroSection() {
             <FadeIn>
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass dark:glass-dark mb-6">
                 <Sparkles className="w-4 h-4 text-EBN-teal" />
-                <span className="text-sm font-medium text-nbn-navy dark:text-white">India&apos;s #1 Entrepreneur Network</span>
+                <span className="text-sm font-medium text-EBN-navy dark:text-slate-100">India&apos;s #1 Entrepreneur Network</span>
               </div>
             </FadeIn>
 
             <FadeIn delay={0.1}>
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-heading font-bold text-EBN-navy dark:text-white leading-[1.1] mb-6">
+              <h1 className="mb-6 font-heading text-3xl font-bold leading-[1.1] text-EBN-navy dark:text-slate-100 sm:text-5xl lg:text-6xl xl:text-7xl">
                 Grow Your Business Through{" "}
                 <span className="gradient-text">Trusted Relationships</span>
               </h1>

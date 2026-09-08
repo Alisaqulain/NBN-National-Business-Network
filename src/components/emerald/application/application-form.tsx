@@ -432,16 +432,16 @@ export function ApplicationForm() {
           </FormSection>
         )}
 
-        <div className="mt-8 flex flex-wrap justify-between gap-4 border-t border-slate-200/80 pt-6">
+        <div className="mt-8 flex flex-col-reverse gap-3 border-t border-slate-200/80 pt-6 dark:border-slate-700 sm:flex-row sm:flex-wrap sm:justify-between sm:gap-4">
           {step > 1 ? (
-            <Button type="button" variant="outline" onClick={() => setStep((s) => s - 1)}>
+            <Button type="button" variant="outline" onClick={() => setStep((s) => s - 1)} className="w-full sm:w-auto">
               <ArrowLeft className="h-4 w-4" /> Back
             </Button>
-          ) : <div />}
+          ) : <div className="hidden sm:block" />}
           {step < 7 ? (
-            <Button type="button" onClick={next}>Continue <ArrowRight className="h-4 w-4" /></Button>
+            <Button type="button" onClick={next} className="w-full sm:ml-auto sm:w-auto">Continue <ArrowRight className="h-4 w-4" /></Button>
           ) : (
-            <Button type="submit" disabled={isSubmitting}>
+            <Button type="submit" disabled={isSubmitting} className="w-full sm:ml-auto sm:w-auto">
               {isSubmitting ? <><Loader2 className="h-4 w-4 animate-spin" /> Submitting...</> : "Submit Application"}
             </Button>
           )}

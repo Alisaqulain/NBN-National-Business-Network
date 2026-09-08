@@ -138,7 +138,7 @@ export function CategoryDirectory() {
                 <select
                   value={industryFilter}
                   onChange={(e) => setIndustryFilter(e.target.value)}
-                  className="h-10 rounded-xl border border-slate-200/80 bg-white px-3 text-sm focus:outline-none focus:ring-2 focus:ring-EBN-teal"
+                  className="h-11 w-full rounded-xl border border-slate-200/80 bg-white px-4 text-sm focus:outline-none focus:ring-2 focus:ring-EBN-teal dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100 sm:w-auto sm:min-w-[200px]"
                 >
                   <option value="All">All Industries</option>
                   {EMERALD_INDUSTRIES.map((ind) => (

@@ -21,7 +21,7 @@ export function CategoryCard({ category, onViewMember, onApply, compact }: Categ
       hover
       className={cn(
         "h-full cursor-pointer",
-        !isOpen && "border-slate-200/80 bg-slate-50/60"
+        !isOpen && "border-slate-200/80 bg-slate-50/60 dark:border-slate-700/50 dark:bg-slate-800/40"
       )}
     >
       <div className="flex items-start justify-between gap-3">

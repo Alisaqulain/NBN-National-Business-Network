@@ -29,7 +29,7 @@ function FormFallback() {
 export default function ApplyPage() {
   return (
     <>
-      <section className="relative overflow-hidden pt-32 pb-12">
+      <section className="relative overflow-hidden pt-24 pb-10 sm:pt-32 sm:pb-12">
         <div className="absolute inset-0 bg-gradient-to-br from-EBN-light via-white to-EBN-teal/5" />
         <div className="container-EBN relative z-10">
           <FadeIn>

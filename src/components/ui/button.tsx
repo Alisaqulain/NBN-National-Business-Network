@@ -11,11 +11,11 @@ const buttonVariants = cva(
         default:
           "bg-gradient-to-r from-EBN-navy to-EBN-teal text-white shadow-lg shadow-EBN-navy/25 hover:shadow-xl hover:shadow-EBN-teal/30 hover:-translate-y-0.5",
         secondary:
-          "bg-white/80 backdrop-blur-md border border-white/20 text-EBN-navy shadow-sm hover:bg-white hover:shadow-md dark:bg-white/10 dark:text-white dark:border-white/10",
+          "bg-white/80 backdrop-blur-md border border-slate-200/80 text-EBN-navy shadow-sm hover:bg-white hover:shadow-md dark:bg-slate-800/90 dark:text-slate-100 dark:border-slate-700 dark:hover:bg-slate-800",
         outline:
-          "border-2 border-EBN-navy/20 bg-transparent text-EBN-navy hover:bg-EBN-navy/5 dark:border-white/20 dark:text-white dark:hover:bg-white/10",
+          "border-2 border-EBN-navy/20 bg-transparent text-EBN-navy hover:bg-EBN-navy/5 dark:border-slate-600 dark:text-slate-100 dark:hover:bg-slate-800/50",
         ghost:
-          "text-EBN-navy hover:bg-EBN-navy/5 dark:text-white dark:hover:bg-white/10",
+          "text-EBN-navy hover:bg-EBN-navy/5 dark:text-slate-200 dark:hover:bg-slate-800/60",
         destructive: "bg-red-500 text-white hover:bg-red-600",
         link: "text-EBN-teal underline-offset-4 hover:underline",
       },

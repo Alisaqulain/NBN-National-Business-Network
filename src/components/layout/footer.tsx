@@ -42,8 +42,8 @@ const SOCIAL = [
 
 export function Footer() {
   return (
-    <footer className="relative overflow-hidden border-t border-slate-200/80 bg-white/90 backdrop-blur-xl">
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-EBN-light/50 via-white to-EBN-light/30" />
+    <footer className="relative overflow-hidden border-t border-slate-200/80 bg-white/90 backdrop-blur-xl dark:border-slate-800 dark:bg-slate-950/95">
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-EBN-light/50 via-white to-EBN-light/30 dark:from-slate-900/50 dark:via-slate-950 dark:to-slate-900/80" />
       <div className="pointer-events-none absolute -top-24 left-1/4 h-72 w-72 rounded-full bg-EBN-teal/5 blur-3xl" />
       <div className="pointer-events-none absolute -bottom-24 right-1/4 h-72 w-72 rounded-full bg-EBN-navy/5 blur-3xl" />
 
@@ -80,7 +80,7 @@ export function Footer() {
 
           {Object.entries(FOOTER_LINKS).map(([title, links]) => (
             <div key={title}>
-              <h4 className="mb-4 font-heading font-semibold text-EBN-navy">{title}</h4>
+              <h4 className="mb-4 font-heading font-semibold text-EBN-navy dark:text-slate-100">{title}</h4>
               <ul className="space-y-3">
                 {links.map((link) => (
                   <li key={link.href}>
@@ -94,10 +94,10 @@ export function Footer() {
           ))}
         </div>
 
-        <div className="mb-16 rounded-2xl border border-EBN-teal/15 bg-gradient-to-br from-EBN-teal/5 via-white to-EBN-navy/5 p-8 md:p-10">
+        <div className="mb-16 rounded-2xl border border-EBN-teal/15 bg-gradient-to-br from-EBN-teal/5 via-white to-EBN-navy/5 p-6 dark:border-EBN-teal/20 dark:from-EBN-teal/10 dark:via-slate-900 dark:to-slate-900 md:p-10">
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             <div>
-              <h4 className="mb-2 font-heading text-lg font-bold text-EBN-navy">{EMERALD.community}</h4>
+              <h4 className="mb-2 font-heading text-lg font-bold text-EBN-navy dark:text-slate-100">{EMERALD.community}</h4>
               <p className="font-heading text-xl font-semibold gradient-text">{EMERALD.chapter} Chapter</p>
               <p className="mt-2 text-sm text-muted">Launching {EMERALD.launchDateDisplay}</p>
             </div>
@@ -122,24 +122,24 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-slate-200/80 py-10">
+        <div className="border-t border-slate-200/80 py-10 dark:border-slate-800">
           <div className="flex flex-col items-center justify-between gap-6 lg:flex-row">
-            <div>
-              <h4 className="mb-2 font-heading font-semibold text-EBN-navy">Stay Updated</h4>
+            <div className="text-center lg:text-left">
+              <h4 className="mb-2 font-heading font-semibold text-EBN-navy dark:text-slate-100">Stay Updated</h4>
               <p className="mb-4 text-sm text-muted">Get networking tips and event updates in your inbox.</p>
             </div>
-            <div className="flex w-full gap-3 lg:w-auto">
+            <div className="flex w-full flex-col gap-3 sm:flex-row lg:w-auto">
               <Input
                 type="email"
                 placeholder="Enter your email"
-                className="min-w-[280px] border-slate-200/80 bg-white shadow-sm"
+                className="w-full sm:min-w-[240px] lg:min-w-[280px]"
               />
-              <Button>Subscribe</Button>
+              <Button className="w-full sm:w-auto shrink-0">Subscribe</Button>
             </div>
           </div>
         </div>
 
-        <div className="flex flex-col items-center justify-between gap-4 border-t border-slate-200/80 pt-8 md:flex-row">
+        <div className="flex flex-col items-center justify-between gap-4 border-t border-slate-200/80 pt-8 dark:border-slate-800 md:flex-row">
           <p className="text-sm text-muted">
             © {new Date().getFullYear()} Entrepreneur Business Network. All rights reserved.
           </p>
@@ -149,7 +149,7 @@ export function Footer() {
                 key={label}
                 href={href}
                 aria-label={label}
-                className="flex h-10 w-10 items-center justify-center rounded-xl border border-slate-200/80 bg-white text-EBN-navy shadow-sm transition-all hover:border-EBN-teal/30 hover:bg-EBN-teal/5 hover:text-EBN-teal"
+                className="flex h-10 w-10 items-center justify-center rounded-xl border border-slate-200/80 bg-white text-EBN-navy shadow-sm transition-all hover:border-EBN-teal/30 hover:bg-EBN-teal/5 hover:text-EBN-teal dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200 dark:hover:border-EBN-teal/40 dark:hover:bg-EBN-teal/10"
               >
                 <Icon className="h-4 w-4" />
               </a>
