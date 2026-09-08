@@ -260,9 +260,9 @@ export function SuccessStoriesView() {
         </div>
 
         <FadeIn className="text-center mt-16">
-          <Link href="/membership">
+          <Link href="/apply">
             <Button size="lg" className="group">
-              Start Your Success Story
+              Apply to Join Emerald
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Button>
           </Link>

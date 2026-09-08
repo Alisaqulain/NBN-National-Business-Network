@@ -19,3 +19,10 @@ export function formatNumber(num: number) {
   if (num >= 1000) return `${(num / 1000).toFixed(1)}K`;
   return num.toString();
 }
+
+export function slugify(text: string): string {
+  return text
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/(^-|-$)/g, "");
+}

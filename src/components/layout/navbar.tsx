@@ -15,12 +15,12 @@ import { cn } from "@/lib/utils";
 
 const MEGA_MENU = [
   {
-    title: "Membership",
+    title: "Emerald",
     icon: Users,
     links: [
-      { label: "Plans & Pricing", href: "/membership" },
-      { label: "Benefits", href: "/membership#benefits" },
-      { label: "Join Now", href: "/signup" },
+      { label: "Emerald Chapter", href: "/emerald" },
+      { label: "Apply to Join", href: "/apply" },
+      { label: "Open Categories", href: "/emerald#directory" },
     ],
   },
   {

@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import MembershipPage from "./membership-client";
 
 export const metadata: Metadata = {
-  title: "Membership Plans",
-  description: "Choose your EBN membership plan. Individual, Professional, Corporate, and Enterprise options with flexible monthly and yearly billing.",
+  title: "Apply to Join — Emerald Chapter",
+  description:
+    "Apply to join the Emerald Chapter of Elite Explorers. Membership is by application and review — no online payment required.",
 };
 
 export default function Page() {

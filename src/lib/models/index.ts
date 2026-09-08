@@ -9,3 +9,4 @@ export { Resource } from "./Resource";
 export { Notification } from "./Notification";
 export { Testimonial } from "./Testimonial";
 export { Contact } from "./Contact";
+export { Application } from "./Application";

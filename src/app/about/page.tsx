@@ -394,9 +394,9 @@ export default function AboutPage() {
               lasting professional relationships.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Link href="/membership">
+              <Link href="/apply">
                 <Button size="lg" variant="secondary" className="bg-white text-EBN-navy hover:bg-white/90">
-                  View Membership Plans
+                  Apply to Join Emerald
                   <ArrowRight className="w-4 h-4" />
                 </Button>
               </Link>

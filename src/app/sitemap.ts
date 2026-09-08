@@ -3,7 +3,7 @@ import { MetadataRoute } from "next";
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://ebn.in";
   const routes = [
-    "", "about", "membership", "chapters", "events", "success-stories",
+    "", "emerald", "apply", "about", "membership", "chapters", "events", "success-stories",
     "categories", "resources", "blog", "contact", "login", "signup",
     "privacy", "terms", "cookies",
   ];

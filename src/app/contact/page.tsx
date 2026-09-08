@@ -200,13 +200,13 @@ export default function ContactPage() {
               Prefer to Explore on Your Own?
             </h2>
             <p className="text-white/70 mb-8 max-w-xl mx-auto">
-              Browse membership plans, find a chapter near you, or read success stories
+              Apply to the Emerald Chapter, explore open categories, or read success stories
               from members like you.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Link href="/membership">
+              <Link href="/apply">
                 <Button size="lg" variant="secondary" className="bg-white text-EBN-navy hover:bg-white/90">
-                  View Plans
+                  Apply to Join
                   <ArrowRight className="w-4 h-4" />
                 </Button>
               </Link>

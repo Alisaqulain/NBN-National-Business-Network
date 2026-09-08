@@ -1,149 +1,137 @@
 "use client";
 
-import { useState } from "react";
 import Link from "next/link";
-import { Check, ArrowRight, X } from "lucide-react";
-import { MEMBERSHIP_PLANS } from "@/lib/constants";
+import { ArrowRight, Check, Handshake, Users, Globe, ShieldCheck, Calendar, GraduationCap } from "lucide-react";
+import { EMERALD, EMERALD_WHY_JOIN } from "@/lib/constants";
 import { Button } from "@/components/ui/button";
-import { GlassCard, SectionHeading, FadeIn, AnimatedCounter } from "@/components/shared/animations";
-import { formatCurrency, cn } from "@/lib/utils";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { GlassCard, SectionHeading, FadeIn } from "@/components/shared/animations";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
-const COMPARISON_FEATURES = [
-  { name: "Chapter Access", individual: "1", professional: "2", corporate: "5", enterprise: "Unlimited" },
-  { name: "Weekly Meetings", individual: true, professional: true, corporate: true, enterprise: true },
-  { name: "Member Directory", individual: true, professional: true, corporate: true, enterprise: true },
-  { name: "Referral Tracking", individual: "Basic", professional: "Advanced", corporate: "Advanced", enterprise: "Premium" },
-  { name: "Event Discounts", individual: false, professional: true, corporate: true, enterprise: true },
-  { name: "Business Templates", individual: false, professional: true, corporate: true, enterprise: true },
-  { name: "Team Members", individual: "1", professional: "1", corporate: "5", enterprise: "Unlimited" },
-  { name: "Dedicated Manager", individual: false, professional: false, corporate: true, enterprise: true },
-  { name: "API Access", individual: false, professional: false, corporate: true, enterprise: true },
-  { name: "White-label Portal", individual: false, professional: false, corporate: false, enterprise: true },
+const icons = { Handshake, Users, Globe, ShieldCheck, Calendar, GraduationCap };
+
+const BENEFITS = [
+  "Structured weekly chapter meetings",
+  "Access to the member business directory",
+  "Quality referral exchange with vetted professionals",
+  "One category, one representative model",
+  "Cross-industry connections across Bangalore and India",
+  "Knowledge sharing, mentoring, and professional development",
 ];
 
 const FAQ = [
-  { q: "Can I switch plans later?", a: "Yes, you can upgrade or downgrade your plan at any time. Changes take effect at the start of your next billing cycle." },
-  { q: "Is there a free trial?", a: "We offer a 14-day money-back guarantee on all plans. Attend your first chapter meeting risk-free." },
-  { q: "Can I join multiple chapters?", a: "Individual members get 1 chapter. Professional gets 2, Corporate gets 5, and Enterprise gets unlimited chapter access." },
-  { q: "What payment methods are accepted?", a: "We accept all major credit/debit cards, UPI, net banking, and wallets through Razorpay. GST invoices are provided." },
+  {
+    q: "Is there an online payment or subscription on this website?",
+    a: "No. Membership is by application and review only. Submit the due diligence form and our team will contact you regarding next steps.",
+  },
+  {
+    q: "How do I apply to join Emerald?",
+    a: "Complete the Applicant's Due Diligence Form. You can also browse open business categories and apply directly for an available category.",
+  },
+  {
+    q: "Can I join if my category is already represented?",
+    a: "Each professional category has one representative. If your category is open, you may apply. Browse the category directory on the Emerald page to check availability.",
+  },
+  {
+    q: "When does the Emerald Chapter launch?",
+    a: `The Emerald Chapter launches on ${EMERALD.launchDateDisplay}. Applications are being accepted now for review.`,
+  },
 ];
 
 export default function MembershipPage() {
-  const [yearly, setYearly] = useState(false);
-
   return (
     <>
-      <section className="pt-32 pb-16 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-EBN-light to-white dark:from-EBN-dark dark:to-EBN-navy/20" />
+      <section className="relative overflow-hidden pt-32 pb-16">
+        <div className="absolute inset-0 bg-gradient-to-br from-EBN-light to-white" />
         <div className="container-EBN relative">
-          <SectionHeading badge="Membership" title="Invest in Your Network" subtitle="Choose the plan that fits your business ambitions." />
+          <SectionHeading
+            badge="Emerald Chapter"
+            title="Apply to Join Elite Explorers"
+            subtitle={`Membership is by application and review — not online payment. Tell us about your business and how you can contribute to the ${EMERALD.chapter} Chapter.`}
+          />
         </div>
       </section>
 
-      <section className="pb-20">
+      <section id="benefits" className="pb-20">
         <div className="container-EBN">
-          <FadeIn className="flex justify-center mb-12">
-            <div className="inline-flex items-center gap-3 p-1.5 rounded-full glass dark:glass-dark">
-              <button onClick={() => setYearly(false)} className={cn("px-6 py-2 rounded-full text-sm font-semibold transition-all", !yearly ? "gradient-bg text-white shadow-lg" : "text-muted")}>Monthly</button>
-              <button onClick={() => setYearly(true)} className={cn("px-6 py-2 rounded-full text-sm font-semibold transition-all", yearly ? "gradient-bg text-white shadow-lg" : "text-muted")}>Yearly <span className="text-xs opacity-80">Save 17%</span></button>
-            </div>
+          <FadeIn>
+            <GlassCard hover={false} className="mb-12 border-EBN-teal/15 bg-EBN-teal/5 p-8 text-center">
+              <p className="text-lg font-medium text-EBN-navy">
+                {EMERALD.networkSizeLabel} professionals across India · {EMERALD.bangaloreMembersLabel} in Bangalore
+              </p>
+              <p className="mt-2 text-muted">Launching {EMERALD.launchDateDisplay}</p>
+              <div className="mt-6 flex flex-wrap justify-center gap-4">
+                <Link href="/apply">
+                  <Button size="lg" className="group">
+                    Apply to Join
+                    <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  </Button>
+                </Link>
+                <Link href="/emerald#directory">
+                  <Button size="lg" variant="outline">View Open Categories</Button>
+                </Link>
+              </div>
+            </GlassCard>
           </FadeIn>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
-            {MEMBERSHIP_PLANS.map((plan, i) => (
-              <FadeIn key={plan.id} delay={i * 0.1}>
-                <GlassCard className={cn("h-full flex flex-col relative", "popular" in plan && plan.popular && "ring-2 ring-EBN-teal")}>
-                  {"popular" in plan && plan.popular && (
-                    <span className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full text-xs font-semibold gradient-bg text-white">Most Popular</span>
-                  )}
-                  <h3 className="text-xl font-heading font-bold text-EBN-navy dark:text-white mb-2">{plan.name}</h3>
-                  <div className="mb-6">
-                    <span className="text-4xl font-heading font-bold gradient-text">{formatCurrency(yearly ? plan.yearly : plan.monthly)}</span>
-                    <span className="text-muted text-sm">/{yearly ? "year" : "month"}</span>
-                  </div>
-                  <ul className="space-y-3 mb-8 flex-1">
-                    {plan.features.map((f) => (
-                      <li key={f} className="flex items-start gap-2 text-sm text-muted"><Check className="w-4 h-4 text-EBN-teal shrink-0 mt-0.5" />{f}</li>
-                    ))}
-                  </ul>
-                  <Link href={`/signup?plan=${plan.id}`}><Button className="w-full">Join Now</Button></Link>
-                </GlassCard>
-              </FadeIn>
-            ))}
+          <div className="mb-16 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {EMERALD_WHY_JOIN.map((item, i) => {
+              const Icon = icons[item.icon as keyof typeof icons] ?? Handshake;
+              return (
+                <FadeIn key={item.title} delay={i * 0.08}>
+                  <GlassCard className="h-full">
+                    <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl gradient-bg">
+                      <Icon className="h-6 w-6 text-white" />
+                    </div>
+                    <h3 className="mb-2 font-heading text-lg font-bold text-EBN-navy">{item.title}</h3>
+                    <p className="text-sm text-muted">{item.description}</p>
+                  </GlassCard>
+                </FadeIn>
+              );
+            })}
           </div>
 
           <FadeIn>
-            <h3 className="text-2xl font-heading font-bold text-center text-EBN-navy dark:text-white mb-8">Plan Comparison</h3>
-            <div className="overflow-x-auto rounded-2xl glass dark:glass-dark">
-              <table className="w-full text-sm">
-                <thead>
-                  <tr className="border-b border-EBN-navy/10">
-                    <th className="text-left p-4 font-semibold">Feature</th>
-                    {MEMBERSHIP_PLANS.map((p) => (<th key={p.id} className="p-4 font-semibold">{p.name}</th>))}
-                  </tr>
-                </thead>
-                <tbody>
-                  {COMPARISON_FEATURES.map((row) => (
-                    <tr key={row.name} className="border-b border-EBN-navy/5">
-                      <td className="p-4 text-muted">{row.name}</td>
-                      {(["individual", "professional", "corporate", "enterprise"] as const).map((plan) => {
-                        const val = row[plan];
-                        return (
-                          <td key={plan} className="p-4 text-center">
-                            {typeof val === "boolean" ? (val ? <Check className="w-5 h-5 text-EBN-teal mx-auto" /> : <X className="w-5 h-5 text-gray-300 mx-auto" />) : val}
-                          </td>
-                        );
-                      })}
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
+            <h3 className="mb-6 text-center font-heading text-2xl font-bold text-EBN-navy">
+              What Membership Includes
+            </h3>
+            <GlassCard hover={false} className="mx-auto max-w-2xl p-8">
+              <ul className="space-y-3">
+                {BENEFITS.map((b) => (
+                  <li key={b} className="flex items-start gap-3 text-sm text-muted">
+                    <Check className="mt-0.5 h-4 w-4 shrink-0 text-EBN-teal" />
+                    {b}
+                  </li>
+                ))}
+              </ul>
+            </GlassCard>
+          </FadeIn>
+
+          <FadeIn className="mt-16">
+            <h3 className="mb-8 text-center font-heading text-2xl font-bold text-EBN-navy">FAQ</h3>
+            <Accordion type="single" collapsible className="mx-auto max-w-2xl">
+              {FAQ.map((item, i) => (
+                <AccordionItem key={item.q} value={`item-${i}`}>
+                  <AccordionTrigger className="text-left font-medium text-EBN-navy">{item.q}</AccordionTrigger>
+                  <AccordionContent className="text-muted">{item.a}</AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </FadeIn>
+
+          <FadeIn className="mt-16 text-center">
+            <Link href="/apply">
+              <Button size="lg" className="group">
+                Start Your Application
+                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </Button>
+            </Link>
           </FadeIn>
         </div>
-      </section>
-
-      <section id="benefits" className="section-padding bg-EBN-light dark:bg-EBN-dark/50">
-        <div className="container-EBN">
-          <SectionHeading badge="Benefits" title="What You Get" subtitle="Every membership includes access to our complete networking ecosystem." />
-          <div className="grid md:grid-cols-3 gap-6">
-            {[
-              { title: "Quality Referrals", desc: "Receive pre-qualified business referrals from verified professionals.", stat: 2400000 },
-              { title: "Weekly Meetings", desc: "Structured chapter meetings every week.", stat: 52 },
-              { title: "Business Education", desc: "Workshops, webinars, and training programs.", stat: 100 },
-            ].map((b, i) => (
-              <FadeIn key={b.title} delay={i * 0.1}>
-                <GlassCard>
-                  <p className="text-3xl font-heading font-bold gradient-text mb-2"><AnimatedCounter value={b.stat} suffix="+" /></p>
-                  <h4 className="font-heading font-bold text-EBN-navy dark:text-white mb-2">{b.title}</h4>
-                  <p className="text-muted text-sm">{b.desc}</p>
-                </GlassCard>
-              </FadeIn>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="section-padding">
-        <div className="container-EBN max-w-3xl">
-          <SectionHeading title="Frequently Asked Questions" />
-          <Accordion type="single" collapsible>
-            {FAQ.map((item, i) => (
-              <AccordionItem key={i} value={`faq-${i}`}>
-                <AccordionTrigger>{item.q}</AccordionTrigger>
-                <AccordionContent>{item.a}</AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
-        </div>
-      </section>
-
-      <section className="section-padding gradient-bg text-center">
-        <FadeIn>
-          <h2 className="text-3xl font-heading font-bold text-white mb-4">Ready to Join?</h2>
-          <Link href="/signup"><Button size="lg" variant="secondary" className="bg-white text-EBN-navy">Get Started <ArrowRight className="w-4 h-4" /></Button></Link>
-        </FadeIn>
       </section>
     </>
   );

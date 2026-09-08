@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Share2, MessageCircle, Globe, Video, Mail, Phone, MapPin, ExternalLink } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { BRAND } from "@/lib/constants";
+import { BRAND, EMERALD } from "@/lib/constants";
 
 const FOOTER_LINKS = {
   Company: [
@@ -13,10 +13,10 @@ const FOOTER_LINKS = {
     { label: "Partners", href: "/about#partners" },
   ],
   Membership: [
-    { label: "Plans", href: "/membership" },
+    { label: "Apply to Join", href: "/apply" },
+    { label: "Emerald Chapter", href: "/emerald" },
+    { label: "Open Categories", href: "/emerald#directory" },
     { label: "Benefits", href: "/membership#benefits" },
-    { label: "Join Now", href: "/signup" },
-    { label: "FAQ", href: "/about#faq" },
   ],
   Resources: [
     { label: "Blog", href: "/blog" },
@@ -92,6 +92,34 @@ export function Footer() {
               </ul>
             </div>
           ))}
+        </div>
+
+        <div className="mb-16 rounded-2xl border border-EBN-teal/15 bg-gradient-to-br from-EBN-teal/5 via-white to-EBN-navy/5 p-8 md:p-10">
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            <div>
+              <h4 className="mb-2 font-heading text-lg font-bold text-EBN-navy">{EMERALD.community}</h4>
+              <p className="font-heading text-xl font-semibold gradient-text">{EMERALD.chapter} Chapter</p>
+              <p className="mt-2 text-sm text-muted">Launching {EMERALD.launchDateDisplay}</p>
+            </div>
+            <div>
+              <p className="text-sm leading-relaxed text-muted">
+                {EMERALD.networkSizeLabel} professionals across India | {EMERALD.bangaloreMembersLabel} Bangalore network
+              </p>
+              <Link href="/emerald" className="mt-3 inline-block text-sm font-medium text-EBN-teal hover:underline">
+                Explore Emerald Chapter →
+              </Link>
+            </div>
+            <div className="space-y-2 text-sm text-muted">
+              {EMERALD.phones.map((phone) => (
+                <div key={phone} className="flex items-center gap-2">
+                  <Phone className="h-4 w-4 shrink-0 text-EBN-teal" />
+                  <a href={`tel:${phone.replace(/\s/g, "")}`} className="hover:text-EBN-teal">
+                    {phone}
+                  </a>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
 
         <div className="border-t border-slate-200/80 py-10">
