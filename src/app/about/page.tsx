@@ -136,9 +136,9 @@ const TIMELINE = [
   },
   {
     year: "2022",
-    title: "20,000 Members Strong",
+    title: "2,000 Members Strong",
     description:
-      "Crosses 20,000 verified members across 500+ chapters. Introduces Corporate and Enterprise membership tiers.",
+      "Grows to 2,000+ verified members across India, with 100+ professionals in Bangalore. Introduces Corporate and Enterprise membership tiers.",
   },
   {
     year: "2025",

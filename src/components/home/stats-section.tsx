@@ -3,9 +3,9 @@
 import { AnimatedCounter, FadeIn, GlassCard } from "@/components/shared/animations";
 
 const EXTENDED_STATS = [
-  { label: "Countries", value: 1, suffix: "" },
+  { label: "Members Across India", value: 2000, suffix: "+" },
+  { label: "Bangalore Network", value: 100, suffix: "+" },
   { label: "Cities", value: 100, suffix: "+" },
-  { label: "Members", value: 20000, suffix: "+" },
   { label: "Business Generated", value: 500, prefix: "₹", suffix: "Cr+" },
   { label: "Meetings Held", value: 50000, suffix: "+" },
   { label: "Referral Value", value: 2500, prefix: "₹", suffix: "Cr+" },

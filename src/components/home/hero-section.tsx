@@ -51,7 +51,7 @@ function HeroIllustration() {
       {/* Floating cards */}
       {[
         { label: "Referrals", value: "₹2.4L", top: "5%", left: "10%", delay: 0 },
-        { label: "Members", value: "20K+", top: "15%", right: "0%", delay: 0.5 },
+        { label: "Members", value: "2K+", top: "15%", right: "0%", delay: 0.5 },
         { label: "Growth", value: "+340%", bottom: "20%", left: "0%", delay: 1 },
         { label: "Meetings", value: "Weekly", bottom: "10%", right: "10%", delay: 1.5 },
       ].map((card) => (

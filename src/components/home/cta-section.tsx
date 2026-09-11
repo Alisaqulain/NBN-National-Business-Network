@@ -22,7 +22,7 @@ export function CTASection() {
               Ready to Transform Your Business Network?
             </h2>
             <p className="mx-auto mb-10 max-w-2xl text-lg text-muted">
-              Join 20,000+ entrepreneurs who are already generating quality referrals and building lasting business relationships through EBN.
+              Join 2,000+ entrepreneurs across India — including 100+ in Bangalore — who are generating quality referrals and building lasting business relationships through EBN.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link href="/signup">

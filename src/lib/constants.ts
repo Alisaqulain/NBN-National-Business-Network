@@ -27,8 +27,8 @@ export const NAV_LINKS = [
 ] as const;
 
 export const STATS = [
-  { label: "Members", value: 20000, suffix: "+" },
-  { label: "Cities", value: 100, suffix: "+" },
+  { label: "Members Across India", value: 2000, suffix: "+" },
+  { label: "Bangalore Network", value: 100, suffix: "+" },
   { label: "Chapters", value: 500, suffix: "+" },
   { label: "Business Generated", value: 500, prefix: "₹", suffix: "Cr+" },
 ] as const;
