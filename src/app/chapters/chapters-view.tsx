@@ -65,7 +65,7 @@ export function ChaptersView() {
         <SectionHeading
           badge="Chapters"
           title="Find a Chapter Near You"
-          subtitle="Join 500+ chapters across 100+ cities in India. Connect with verified business professionals in your area."
+          subtitle="Join 5 chapters across India. Connect with verified business professionals in your area."
         />
 
         {/* Filters */}

@@ -29,8 +29,8 @@ export const NAV_LINKS = [
 export const STATS = [
   { label: "Members Across India", value: 2000, suffix: "+" },
   { label: "Bangalore Network", value: 100, suffix: "+" },
-  { label: "Chapters", value: 500, suffix: "+" },
-  { label: "Business Generated", value: 500, prefix: "₹", suffix: "Cr+" },
+  { label: "Chapters", value: 5, suffix: "" },
+  { label: "Business Generated", value: 100, prefix: "₹", suffix: "Cr+" },
 ] as const;
 
 export const WHY_CHOOSE = [

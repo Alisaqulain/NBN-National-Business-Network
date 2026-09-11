@@ -6,7 +6,7 @@ const EXTENDED_STATS = [
   { label: "Members Across India", value: 2000, suffix: "+" },
   { label: "Bangalore Network", value: 100, suffix: "+" },
   { label: "Cities", value: 100, suffix: "+" },
-  { label: "Business Generated", value: 500, prefix: "₹", suffix: "Cr+" },
+  { label: "Business Generated", value: 100, prefix: "₹", suffix: "Cr+" },
   { label: "Meetings Held", value: 50000, suffix: "+" },
   { label: "Referral Value", value: 2500, prefix: "₹", suffix: "Cr+" },
 ];

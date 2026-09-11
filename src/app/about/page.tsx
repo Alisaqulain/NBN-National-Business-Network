@@ -80,7 +80,7 @@ const LEADERSHIP = [
   {
     name: "Priya Sharma",
     role: "Chief Operating Officer",
-    bio: "Former McKinsey consultant who scaled EBN operations from 50 to 500+ chapters. Priya oversees chapter excellence and member experience nationwide.",
+    bio: "Former McKinsey consultant who scaled EBN operations across India. Priya oversees chapter excellence and member experience nationwide.",
     image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop&crop=face",
   },
   {
@@ -194,7 +194,7 @@ export default function AboutPage() {
             <p className="text-lg md:text-xl text-muted max-w-2xl leading-relaxed">
               Since 2010, {BRAND.name} has connected entrepreneurs, professionals, and
               business leaders through structured referral networking — generating over
-              ₹500 crore in member business across {STATS[1].value}+ cities.
+              ₹100 crore in member business across India, with a strong Bangalore network.
             </p>
           </FadeIn>
         </div>

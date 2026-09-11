@@ -73,7 +73,7 @@ export const SUCCESS_STORIES: Testimonial[] = [
 ];
 
 export const FEATURED_VIDEO = {
-  title: "How EBN Members Generated ₹500 Crore in Referrals",
+  title: "How EBN Members Generated ₹100 Crore in Referrals",
   description: "Watch our 2025 annual impact documentary featuring members from Mumbai, Delhi, and Bangalore sharing their referral journeys.",
   thumbnail: "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=1280&h=720&fit=crop",
   duration: "12:34",
